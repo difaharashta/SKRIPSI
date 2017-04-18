@@ -1,0 +1,47 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="972" measuredH="425" mockupW="549" mockupH="367">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="423" y="58" w="549" h="367" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>A%20Web%20Page%0Ahttp%3A//togaftools.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::DataGrid" x="497" y="178" w="400" h="164" measuredW="243" measuredH="81" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>No.%20%2C%20Visi%2C%20Edit%2C%20Delete%0A1%2C%20Menciptakan......%0A%20</text>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Button" x="736" y="360" w="70" h="27" measuredW="45" measuredH="27" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>editor%20form%20visi%26bm%3Beditor%20form%20visi.bmml%26bm%3Beditor%20form%20visi.bmml%26bm%3Beditor%20form%20visi.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22313%2C302%2C383%2C329%22%20href%3D%22editor%2520form%2520visi.bmml%22%20alt%3D%22editor%20form%20visi%22%20id%3D%222%22/%3E</map>
+        <text>Add</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Label" x="641" y="142" w="-1" h="-1" measuredW="84" measuredH="28" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>20</size>
+        <text>Form%20Visi</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Button" x="821" y="360" w="65" h="27" measuredW="40" measuredH="27" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>membuatmodelEA%26bm%3BmembuatmodelEA.bmml%26bm%3BmembuatmodelEA.bmml%26bm%3BmembuatmodelEA.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22398%2C302%2C463%2C329%22%20href%3D%22membuatmodelEA.bmml%22%20alt%3D%22membuatmodelEA%22%20id%3D%224%22/%3E</map>
+        <text>Ok</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Icon" x="740" y="202" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>editor%20form%20visi%26bm%3Beditor%20form%20visi.bmml%26bm%3Beditor%20form%20visi.bmml%26bm%3Beditor%20form%20visi.bmml</href>
+        <icon>PencilIcon%7Cxsmall</icon>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22317%2C144%2C333%2C160%22%20href%3D%22editor%2520form%2520visi.bmml%22%20alt%3D%22editor%20form%20visi%22%20id%3D%225%22/%3E</map>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Icon" x="829" y="202" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>Trash2Icon%7Cxsmall</icon>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

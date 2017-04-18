@@ -1,0 +1,38 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="981" measuredH="440" mockupW="582" mockupH="400">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="399" y="40" w="582" h="400" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>A%20Web%20Page%0Ahttp%3A//togaftools.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::TitleWindow" x="482" y="153" w="417" h="212" measuredW="450" measuredH="400" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Predecessor%20Proses</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Label" x="497" y="213" w="140" h="-1" measuredW="127" measuredH="21" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Predecessor%20proses%20%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::TextInput" x="637" y="210" w="228" h="-1" measuredW="79" measuredH="26" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Button" x="799" y="285" w="66" h="27" measuredW="40" measuredH="27" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>Editor%20form%20proses%26bm%3BEditor%20form%20proses.bmml%26bm%3BEditor%20form%20proses.bmml%26bm%3BEditor%20form%20proses.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22400%2C245%2C466%2C272%22%20href%3D%22Editor%2520form%2520proses.bmml%22%20alt%3D%22Editor%20form%20proses%22%20id%3D%224%22/%3E</map>
+        <text>Ok</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Button" x="721" y="285" w="61" h="27" measuredW="45" measuredH="27" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>Predecessor%20proses%26bm%3BPredecessor%20proses.bmml%26bm%3BPredecessor%20proses.bmml%26bm%3BPredecessor%20proses.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22322%2C245%2C383%2C272%22%20href%3D%22Predecessor%2520proses.bmml%22%20alt%3D%22Predecessor%20proses%22%20id%3D%225%22/%3E</map>
+        <text>Add</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

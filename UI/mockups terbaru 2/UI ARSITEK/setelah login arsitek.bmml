@@ -1,0 +1,45 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="977" measuredH="428" mockupW="606" mockupH="400">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="371" y="28" w="606" h="400" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>A%20Web%20Page%0Ahttp%3A//togaftools.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Button" x="832" y="313" w="-1" h="-1" measuredW="40" measuredH="27" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>menu%20awal%26bm%3Bmenu%20awal.bmml%26bm%3Bmenu%20awal.bmml%26bm%3Bmenu%20awal.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22461%2C285%2C501%2C312%22%20href%3D%22menu%2520awal.bmml%22%20alt%3D%22menu%20awal%22%20id%3D%222%22/%3E</map>
+        <text>Ok</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::DataGrid" x="485" y="157" w="387" h="141" measuredW="186" measuredH="81" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>No%2C%20Nama%20Perusahaan%2C%20Pilih%0A1%2C%20Perusahaan%20ABC%2C%20%0A2%2C%20Perusahaan%20XYZ%2C%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Button" x="485" y="313" w="-1" h="-1" measuredW="142" measuredH="27" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>tambah%20perusahaan%26bm%3Btambah%20perusahaan.bmml%26bm%3Btambah%20perusahaan.bmml%26bm%3Btambah%20perusahaan.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22114%2C285%2C256%2C312%22%20href%3D%22tambah%2520perusahaan.bmml%22%20alt%3D%22tambah%20perusahaan%22%20id%3D%224%22/%3E</map>
+        <text>Tambah%20Perusahaan</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::RadioButton" x="826" y="179" w="-1" h="-1" measuredW="16" measuredH="21" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::RadioButton" x="826" y="211" w="-1" h="-1" measuredW="16" measuredH="21" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Button" x="872" y="115" w="-1" h="-1" measuredW="71" measuredH="27" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>login%26bm%3Blogin.bmml%26bm%3Blogin.bmml%26bm%3Blogin.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22501%2C87%2C572%2C114%22%20href%3D%22login.bmml%22%20alt%3D%22login%22%20id%3D%228%22/%3E</map>
+        <text>Log%20Out</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

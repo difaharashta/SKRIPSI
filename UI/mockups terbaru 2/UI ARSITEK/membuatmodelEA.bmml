@@ -1,0 +1,58 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="972" measuredH="522" mockupW="701" mockupH="504">
+  <controls>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="271" y="18" w="701" h="504" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>A%20Web%20Page%0Ahttp%3A//togaftools.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Button" x="529" y="125" w="177" h="46" measuredW="88" measuredH="27" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>preliminary%26bm%3Bpreliminary.bmml%26bm%3Bpreliminary.bmml%26bm%3Bpreliminary.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22258%2C107%2C435%2C153%22%20href%3D%22preliminary.bmml%22%20alt%3D%22preliminary%22%20id%3D%222%22/%3E</map>
+        <text>Preliminary</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Button" x="529" y="186" w="177" h="46" measuredW="133" measuredH="27" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>av%26bm%3Bav.bmml%26bm%3Bav.bmml%26bm%3Bav.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22258%2C168%2C435%2C214%22%20href%3D%22av.bmml%22%20alt%3D%22av%22%20id%3D%223%22/%3E</map>
+        <text>Architecture%20Vision</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Button" x="529" y="247" w="177" h="46" measuredW="151" measuredH="27" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>ba%26bm%3Bba.bmml%26bm%3Bba.bmml%26bm%3Bba.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22258%2C229%2C435%2C275%22%20href%3D%22ba.bmml%22%20alt%3D%22ba%22%20id%3D%224%22/%3E</map>
+        <text>Business%20Architecture</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Button" x="529" y="302" w="177" h="46" measuredW="126" measuredH="27" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>da%26bm%3Bda.bmml%26bm%3Bda.bmml%26bm%3Bda.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22258%2C284%2C435%2C330%22%20href%3D%22da.bmml%22%20alt%3D%22da%22%20id%3D%225%22/%3E</map>
+        <text>Data%20Architecture</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Button" x="529" y="357" w="177" h="46" measuredW="162" measuredH="27" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>aa%26bm%3Baa.bmml%26bm%3Baa.bmml%26bm%3Baa.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22258%2C339%2C435%2C385%22%20href%3D%22aa.bmml%22%20alt%3D%22aa%22%20id%3D%226%22/%3E</map>
+        <text>Application%20Architecture</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Button" x="529" y="412" w="177" h="46" measuredW="163" measuredH="27" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>ta%26bm%3Bta.bmml%26bm%3Bta.bmml%26bm%3Bta.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22258%2C394%2C435%2C440%22%20href%3D%22ta.bmml%22%20alt%3D%22ta%22%20id%3D%227%22/%3E</map>
+        <text>Technology%20Architecture</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Button" x="860" y="455" w="-1" h="-1" measuredW="51" measuredH="27" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>menu%20awal%26bm%3Bmenu%20awal.bmml%26bm%3Bmenu%20awal.bmml%26bm%3Bmenu%20awal.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22589%2C437%2C640%2C464%22%20href%3D%22menu%2520awal.bmml%22%20alt%3D%22menu%20awal%22%20id%3D%228%22/%3E</map>
+        <text>Back</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

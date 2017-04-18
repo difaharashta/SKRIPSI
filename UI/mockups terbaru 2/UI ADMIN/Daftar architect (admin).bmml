@@ -1,0 +1,49 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1381" measuredH="430" mockupW="1370" mockupH="395">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="11" y="35" w="1370" h="395" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>A%20Web%20Page%0Ahttp%3A//togaftools.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Label" x="36" y="148" w="-1" h="-1" measuredW="182" measuredH="24" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Daftar%20Pengguna%20Arsitek</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Button" x="1283" y="121" w="-1" h="-1" measuredW="71" measuredH="27" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>Login%26bm%3BLogin.bmml%26bm%3BLogin.bmml%26bm%3BLogin.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%221272%2C86%2C1343%2C113%22%20href%3D%22Login.bmml%22%20alt%3D%22Login%22%20id%3D%226%22/%3E</map>
+        <text>Log%20Out</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::DataGrid" x="35" y="188" w="1319" h="143" measuredW="1258" measuredH="81" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>No%20%2C%20Nama%2C%20Email%2C%20Alamat%20%2C%20Kota%20%2C%20Provinsi%20%2C%20No%20Hp%20%2C%20Nama%20Perusahaan%20%2C%20Email%20Perusahaan%20%2C%20No%20Telp%20Perusahaan%20%2C%20Fax%20%2C%20Lihat%20hasil%20model%20arsitektur%0A1%2C%20Chila%2C%20chilacat@gmail.com%20%2C%20jalan%20alamanda%20no%2090B%20%2C%20Bandung%20%2C%20Jawa%20Barat%20%2C08122882211%20%2C%20%20Perusahaan%20ABC%2C%20ptABC@gmail.com%20%2C022121221%20%2C%2002277882%20%2C%20%0A2%2C%20Chila%2C%20chilacat@gmail.com%20%2C%20jalan%20alamanda%20no%2090B%20%2C%20Jakarta%20%2C%20DKI%20Jakarta%20%2C08122882211%20%2C%20%20Perusahaan%20XYZ%2C%20ptxyz@gmail.com%20%2C021323221%20%2C%20021977882%20%2C%20</text>
+        <verticalScrollbar>false</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Icon" x="1252" y="215" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>hasil%20model%26bm%3Bhasil%20model.bmml%26bm%3Bhasil%20model.bmml%26bm%3Bhasil%20model.bmml</href>
+        <icon>HourGlassIcon%7Cxsmall</icon>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%221241%2C180%2C1257%2C196%22%20href%3D%22hasil%2520model.bmml%22%20alt%3D%22hasil%20model%22%20id%3D%228%22/%3E</map>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::Button" x="1283" y="346" w="71" h="27" measuredW="51" measuredH="27" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>Setelah%20Login%20Admin%26bm%3BSetelah%20Login%20Admin.bmml%26bm%3BSetelah%20Login%20Admin.bmml%26bm%3BSetelah%20Login%20Admin.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%221272%2C311%2C1343%2C338%22%20href%3D%22Setelah%2520Login%2520Admin.bmml%22%20alt%3D%22Setelah%20Login%20Admin%22%20id%3D%229%22/%3E</map>
+        <text>Back</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Icon" x="1252" y="246" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>hasil%20model%26bm%3Bhasil%20model.bmml%26bm%3Bhasil%20model.bmml%26bm%3Bhasil%20model.bmml</href>
+        <icon>HourGlassIcon%7Cxsmall</icon>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%221241%2C211%2C1257%2C227%22%20href%3D%22hasil%2520model.bmml%22%20alt%3D%22hasil%20model%22%20id%3D%2211%22/%3E</map>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

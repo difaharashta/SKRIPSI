@@ -1,0 +1,42 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="934" measuredH="400" mockupW="570" mockupH="342">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="364" y="58" w="570" h="342" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>A%20Web%20Page%0Ahttp%3A//togaftools.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::Link" x="592" y="179" w="-1" h="-1" measuredW="114" measuredH="19" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>membuatmodelEA%26bm%3BmembuatmodelEA.bmml%26bm%3BmembuatmodelEA.bmml%26bm%3BmembuatmodelEA.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22228%2C121%2C342%2C140%22%20href%3D%22membuatmodelEA.bmml%22%20alt%3D%22membuatmodelEA%22%20id%3D%221%22/%3E</map>
+        <text>Membuat%20Model%20EA</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Link" x="602" y="220" w="-1" h="-1" measuredW="94" measuredH="19" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Import%20File%20XML</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Link" x="602" y="262" w="-1" h="-1" measuredW="93" measuredH="19" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>hasil%20model%26bm%3Bhasil%20model.bmml%26bm%3Bhasil%20model.bmml%26bm%3Bhasil%20model.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22238%2C204%2C331%2C223%22%20href%3D%22hasil%2520model.bmml%22%20alt%3D%22hasil%20model%22%20id%3D%223%22/%3E</map>
+        <text>View%20Tracebility</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Button" x="836" y="335" w="-1" h="-1" measuredW="51" measuredH="27" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>setelah%20login%20arsitek%26bm%3Bsetelah%20login%20arsitek.bmml%26bm%3Bsetelah%20login%20arsitek.bmml%26bm%3Bsetelah%20login%20arsitek.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22472%2C277%2C523%2C304%22%20href%3D%22setelah%2520login%2520arsitek.bmml%22%20alt%3D%22setelah%20login%20arsitek%22%20id%3D%224%22/%3E</map>
+        <text>Back</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Link" x="618" y="307" w="-1" h="-1" measuredW="62" measuredH="19" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>view%20profil%26bm%3Bview%20profil.bmml%26bm%3Bview%20profil.bmml%26bm%3Bview%20profil.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22254%2C249%2C316%2C268%22%20href%3D%22view%2520profil.bmml%22%20alt%3D%22view%20profil%22%20id%3D%225%22/%3E</map>
+        <text>View%20Profil</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

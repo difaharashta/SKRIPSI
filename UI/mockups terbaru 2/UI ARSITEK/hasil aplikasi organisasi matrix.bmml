@@ -1,0 +1,34 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1093" measuredH="764" mockupW="936" mockupH="727">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="157" y="37" w="936" h="727" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>A%20Web%20Page%0Ahttp%3A//togaftools.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::FieldSet" x="223" y="147" w="805" h="507" measuredW="200" measuredH="170" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Application/Organization%20Matrix</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Image" x="303" y="168" w="647" h="465" measuredW="602" measuredH="431" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>../../BAB/GAMBAR/AA/aplikasi%2520organisasi%2520matrix.jpg</src>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Button" x="960" y="677" w="68" h="27" measuredW="40" measuredH="27" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>membuatmodelEA%26bm%3BmembuatmodelEA.bmml%26bm%3BmembuatmodelEA.bmml%26bm%3BmembuatmodelEA.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22803%2C640%2C871%2C667%22%20href%3D%22membuatmodelEA.bmml%22%20alt%3D%22membuatmodelEA%22%20id%3D%223%22/%3E</map>
+        <text>Ok</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Button" x="870" y="677" w="65" h="27" measuredW="51" measuredH="27" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>hasil%20model%26bm%3Bhasil%20model.bmml%26bm%3Bhasil%20model.bmml%26bm%3Bhasil%20model.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22713%2C640%2C778%2C667%22%20href%3D%22hasil%2520model.bmml%22%20alt%3D%22hasil%20model%22%20id%3D%224%22/%3E</map>
+        <text>Back</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

@@ -1,0 +1,50 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1011" measuredH="421" mockupW="632" mockupH="391">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="379" y="30" w="632" h="391" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>A%20Web%20Page%0Ahttp%3A//togaftools.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::TitleWindow" x="487" y="123" w="417" h="246" measuredW="450" measuredH="400" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Editor%20Form%20Teknologi</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Label" x="502" y="172" w="-1" h="-1" measuredW="98" measuredH="21" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Nama%20teknologi%20%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Label" x="502" y="220" w="-1" h="-1" measuredW="45" measuredH="21" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Parent%20%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::TextInput" x="619" y="169" w="254" h="-1" measuredW="79" measuredH="26" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::ComboBox" x="619" y="218" w="79" h="-1" measuredW="30" measuredH="24" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>parent%20teknologi%26bm%3Bparent%20teknologi.bmml%26bm%3Bparent%20teknologi.bmml%26bm%3Bparent%20teknologi.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22240%2C188%2C319%2C212%22%20href%3D%22parent%2520teknologi.bmml%22%20alt%3D%22parent%20teknologi%22%20id%3D%225%22/%3E</map>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Button" x="808" y="306" w="65" h="27" measuredW="40" measuredH="27" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>form%20teknologi%26bm%3Bform%20teknologi.bmml%26bm%3Bform%20teknologi.bmml%26bm%3Bform%20teknologi.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22429%2C276%2C494%2C303%22%20href%3D%22form%2520teknologi.bmml%22%20alt%3D%22form%20teknologi%22%20id%3D%226%22/%3E</map>
+        <text>Ok</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Button" x="728" y="307" w="65" h="27" measuredW="51" measuredH="27" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>membuatmodelEA%26bm%3BmembuatmodelEA.bmml%26bm%3BmembuatmodelEA.bmml%26bm%3BmembuatmodelEA.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22349%2C277%2C414%2C304%22%20href%3D%22membuatmodelEA.bmml%22%20alt%3D%22membuatmodelEA%22%20id%3D%227%22/%3E</map>
+        <text>Back</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

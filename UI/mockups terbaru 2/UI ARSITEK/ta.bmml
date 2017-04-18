@@ -1,0 +1,42 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="892" measuredH="743" mockupW="541" mockupH="696">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="351" y="47" w="541" h="696" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>A%20Web%20Page%0Ahttp%3A//togaftools.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="568" y="136" w="149" h="-1" measuredW="141" measuredH="21" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Technology%20Architecture</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Accordion" x="499" y="172" w="278" h="167" measuredW="150" measuredH="240" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs>%2Cform%20teknologi%26bm%3Bform%20teknologi.bmml%26bm%3Bform%20teknologi.bmml%26bm%3Bform%20teknologi.bmml%2Cform%20aplikasi%26bm%3Bform%20aplikasi.bmml%26bm%3Bform%20aplikasi.bmml%26bm%3Bform%20aplikasi.bmml%2Cform%20lokasi%20organisasi%26bm%3Bform%20lokasi%20organisasi.bmml%26bm%3Bform%20lokasi%20organisasi.bmml%26bm%3Bform%20lokasi%20organisasi.bmml%2Cform%20jabatan%26bm%3Bform%20jabatan.bmml%26bm%3Bform%20jabatan.bmml%26bm%3Bform%20jabatan.bmml%2Cform%20proses%26bm%3Bform%20proses.bmml%26bm%3Bform%20proses.bmml%26bm%3Bform%20proses.bmml</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22148%2C154%2C426%2C184%22%20href%3D%22form%2520teknologi.bmml%22%20alt%3D%22form%20teknologi%22%20id%3D%222%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22148%2C181%2C426%2C211%22%20href%3D%22form%2520aplikasi.bmml%22%20alt%3D%22form%20aplikasi%22%20id%3D%222%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22148%2C208%2C426%2C238%22%20href%3D%22form%2520lokasi%2520organisasi.bmml%22%20alt%3D%22form%20lokasi%20organisasi%22%20id%3D%222%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22148%2C235%2C426%2C265%22%20href%3D%22form%2520jabatan.bmml%22%20alt%3D%22form%20jabatan%22%20id%3D%222%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22148%2C262%2C426%2C292%22%20href%3D%22form%2520proses.bmml%22%20alt%3D%22form%20proses%22%20id%3D%222%22/%3E</map>
+        <text>Katalog%0AForm%20Teknologi%0AForm%20Aplikasi%20%0AForm%20Lokasi%20Organisasi%0AForm%20Jabatan%0AForm%20Proses</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Button" x="812" y="671" w="-1" h="-1" measuredW="51" measuredH="27" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>membuatmodelEA%26bm%3BmembuatmodelEA.bmml%26bm%3BmembuatmodelEA.bmml%26bm%3BmembuatmodelEA.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22461%2C624%2C512%2C651%22%20href%3D%22membuatmodelEA.bmml%22%20alt%3D%22membuatmodelEA%22%20id%3D%223%22/%3E</map>
+        <text>Back</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Accordion" x="499" y="374" w="278" h="58" measuredW="185" measuredH="132" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs/>
+        <text>Matrix%0AApplication/Technology%20Matrix</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Accordion" x="499" y="479" w="278" h="140" measuredW="254" measuredH="213" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs>%2Chasil%20model%26bm%3Bhasil%20model.bmml%26bm%3Bhasil%20model.bmml%26bm%3Bhasil%20model.bmml%2C%2Chasil%20model%26bm%3Bhasil%20model.bmml%26bm%3Bhasil%20model.bmml%26bm%3Bhasil%20model.bmml%2Chasil%20model%26bm%3Bhasil%20model.bmml%26bm%3Bhasil%20model.bmml%26bm%3Bhasil%20model.bmml</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22148%2C461%2C426%2C491%22%20href%3D%22hasil%2520model.bmml%22%20alt%3D%22hasil%20model%22%20id%3D%225%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22148%2C515%2C426%2C545%22%20href%3D%22hasil%2520model.bmml%22%20alt%3D%22hasil%20model%22%20id%3D%225%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22148%2C542%2C426%2C572%22%20href%3D%22hasil%2520model.bmml%22%20alt%3D%22hasil%20model%22%20id%3D%225%22/%3E</map>
+        <text>Diagram%0AEnvironments%20and%20Locations%20Diagram%0APlatform%20Decomposition%20Diagram%0AProcessing%20Diagram%0ANetworked%20Computing/Hardware%20Diagram</text>
+        <verticalScrollbar>false</verticalScrollbar>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

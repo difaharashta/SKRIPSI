@@ -1,0 +1,31 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="994" measuredH="439" mockupW="649" mockupH="400">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="345" y="39" w="649" h="400" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>A%20Web%20Page%0Ahttp%3A//togaftools.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::TitleWindow" x="461" y="162" w="417" h="180" measuredW="450" measuredH="400" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Parent%20Data</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Label" x="488" y="220" w="84" h="-1" measuredW="75" measuredH="21" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Parent%20data%20%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::TextInput" x="572" y="217" w="255" h="-1" measuredW="79" measuredH="26" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Button" x="761" y="262" w="66" h="27" measuredW="40" measuredH="27" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>editor%20form%20data%26bm%3Beditor%20form%20data.bmml%26bm%3Beditor%20form%20data.bmml%26bm%3Beditor%20form%20data.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22416%2C223%2C482%2C250%22%20href%3D%22editor%2520form%2520data.bmml%22%20alt%3D%22editor%20form%20data%22%20id%3D%224%22/%3E</map>
+        <text>Ok</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

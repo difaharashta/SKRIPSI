@@ -1,0 +1,220 @@
+/*style*/
+* {
+	font-family: helvetica;
+}
+#title{
+	text-align: center;
+}
+#page-wrapper
+{
+	margin: 0px !important;
+}
+.signup{
+	padding:10px;
+	text-align: center;
+}
+.box h2{
+text-align: center;
+}
+.box hr{
+padding:0px;
+margin:0px !important;	
+}
+.error{
+	color:red;
+	margin:10px;text-align: center;
+}
+.childkatalog ul{
+	margin:0px;
+	padding:0px;	
+}
+.childkatalog ul li{
+	list-style:none;
+	padding:10px;
+	text-align:center;
+}
+.childkatalog ul li a{
+	color:white;
+}
+.childkatalog h4{
+	font-size:14px;
+	background: #fc6e51;
+	color:white;
+	text-align: center;
+	margin:0px;
+	padding:10px;
+	
+}
+.katalogclick{
+	border-radius:0px !important;
+	font-weight:bold;
+}
+.childkatalog{
+	margin:0 auto;
+	/*display:none; */
+	margin-top:0px !important;
+	margin-top:0px !important;
+}
+
+
+
+.box-menu-detail{
+	width:300px;
+	margin:0 auto;
+	margin-top:10px !important;
+	margin-top:25px !important;
+}
+.box-menu-detail p{
+	margin:0px;
+	padding:0px;
+}
+.box-menu-detail a{
+	width:300px;
+	padding:10px;
+}
+.box-menu-detail h4{
+	width:100%;
+	background: #fc6e51;
+	color:white;
+	text-align: center;
+	margin:0px;
+	padding:10px;
+	border-radius: 5px;
+}
+
+.box-menu a{
+	width:300px;
+	padding:10px;
+}
+.box-menu p{
+	margin-bottom: 25px;
+}
+.box-menu{
+	margin-top:10px !important;
+	width:300px;
+	margin:0 auto;
+}
+.box-profile{
+	margin-top:10px !important;
+	width:100%;
+	padding-left:25px;
+	padding-right:25px;
+	margin:0 auto;
+}
+.back{
+	bottom: 0;
+	margin-bottom: 25px;
+}
+table tr th{
+	text-align: center !important;
+}table tr td{
+	text-align: center !important;
+}
+#link{
+	width: 100%;
+}
+#link li.parent{
+	float:left;
+	margin:0px;
+	padding:0px;
+	width:205px;
+	list-style: none;
+	margin:0px 10px;
+}
+#link li.parent p.main{
+	background: #fc6e51;
+	text-align: center;
+	color: white;
+	margin:0px;
+	padding:10px;
+}
+
+#link li.parent ul{
+	margin:0px;
+	padding:0px;
+}
+li.child:hover{
+	cursor: pointer;
+}
+#link li.parent ul li.child{
+	list-style: none;
+	color: white;
+	margin:0px;
+	padding:0px;
+}
+
+#link li.parent ul li.child p{
+	background: #428bca;
+	text-transform: capitalize;
+	padding:10px;
+	margin:0px;
+}
+#link li.parent ul li.child p:hover{
+	background: #3071a9;
+	text-decoration: none;
+}
+#link li.parent ul li.child p a{
+	color:white;
+	display: block;
+}
+#link li.parent ul li.child p a:hover{
+	text-decoration: none;
+}
+#linkke {
+	width:100%;
+	  padding: 0px;
+  margin: 0 auto;
+  width: 210px;
+	text-align: center;
+}
+#linkke li{
+	width:200px;
+	list-style: none;
+	text-transform: capitalize;
+	padding:10px;
+	background: #428bca;
+	margin:0 auto;
+	margin:10px;
+	color:white;
+}
+#linkke li:hover{
+	background: #3071a9;
+}
+#linkke li a:hover{
+	text-decoration: none;
+}
+#linkke li a{
+	display: block;
+	color:white;
+
+}
+/*
+.table-left{
+	margin:0 auto;width:500px;
+}
+*/
+.table-left tr th  {
+	text-align:left !important;
+}
+
+.table-left tr td {
+	text-align:left !important;
+}
+
+.table-test tr th  {
+	text-align:left !important;
+}
+#keterangan{
+	padding:10px;
+	min-height:100px;
+}
+#keterangan table td{
+	padding:10px;
+	text-align:left;
+}
+#menunavigasi a:hover{
+	text-decoration:none;
+}
+#menunavigasi a{
+	text-decoration:none;
+}

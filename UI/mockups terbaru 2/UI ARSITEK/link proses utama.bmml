@@ -1,0 +1,60 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1068" measuredH="442" mockupW="769" mockupH="400">
+  <controls>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Button" x="514" y="363" w="-1" h="-1" measuredW="40" measuredH="27" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>editor%20form%20aplikasi%26bm%3Beditor%20form%20aplikasi.bmml%26bm%3Beditor%20form%20aplikasi.bmml%26bm%3Beditor%20form%20aplikasi.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22215%2C321%2C255%2C348%22%20href%3D%22editor%2520form%2520aplikasi.bmml%22%20alt%3D%22editor%20form%20aplikasi%22%20id%3D%222%22/%3E</map>
+        <text>Ok</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="299" y="42" w="769" h="400" measuredW="450" measuredH="400" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>A%20Web%20Page%0Ahttp%3A//togaftools.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::DataGrid" x="351" y="190" w="664" h="164" measuredW="281" measuredH="155" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hasHeader>false</hasHeader>
+        <text>No%2C%20Nama%20Link%2C%20Nama%20Proses%2C%20Pilih%0A1%2C%20%2C%20Portofolio%20Definition%2C%20%5B%20%5D%0A2%2C%20%2C%20Marketing%2C%20%5B%20%5D%0A3%2C%20%2C%20Sales%2C%20%5B%20%5D%0A4%2C%20%2C%20Billing%2C%20%5B%20%5D</text>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Button" x="975" y="363" w="-1" h="-1" measuredW="40" measuredH="27" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>form%20proses%26bm%3Bform%20proses.bmml%26bm%3Bform%20proses.bmml%26bm%3Bform%20proses.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22676%2C321%2C716%2C348%22%20href%3D%22form%2520proses.bmml%22%20alt%3D%22form%20proses%22%20id%3D%225%22/%3E</map>
+        <text>Ok</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::TextInput" x="420" y="224" w="134" h="-1" measuredW="79" measuredH="26" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::TextInput" x="420" y="255" w="134" h="-1" measuredW="79" measuredH="26" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::TextInput" x="420" y="284" w="134" h="-1" measuredW="79" measuredH="26" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::TextInput" x="420" y="316" w="134" h="-1" measuredW="79" measuredH="26" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::Label" x="314" y="128" w="-1" h="-1" measuredW="627" measuredH="21" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Hubungan%20Antar%20Proses%20ini%20menampilkan%20daftar%20proses%20utama%20%28hanya%20yg%20yang%20parentnya%20adalah%20root%29%20dan%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Label" x="314" y="149" w="-1" h="-1" measuredW="475" measuredH="21" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>direlasikan%20oleh%20pengguna%20arsitek%20untuk%20menghasilkan%20VALUE%20CHAIN%20DIAGRAM.</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

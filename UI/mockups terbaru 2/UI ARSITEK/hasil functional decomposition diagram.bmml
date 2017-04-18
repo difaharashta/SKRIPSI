@@ -1,0 +1,40 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1093" measuredH="936" mockupW="936" mockupH="899">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="157" y="37" w="936" h="899" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>A%20Web%20Page%0Ahttp%3A//togaftools.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::FieldSet" x="223" y="147" w="805" h="650" measuredW="200" measuredH="170" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Functional%20Decomposition%20Diagram</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Image" x="282" y="162" w="686" h="465" measuredW="735" measuredH="385" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>../../BAB/GAMBAR/ba/functionnal-decomposition-diagram.png</src>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Button" x="960" y="836" w="68" h="27" measuredW="40" measuredH="27" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>membuatmodelEA%26bm%3BmembuatmodelEA.bmml%26bm%3BmembuatmodelEA.bmml%26bm%3BmembuatmodelEA.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22803%2C799%2C871%2C826%22%20href%3D%22membuatmodelEA.bmml%22%20alt%3D%22membuatmodelEA%22%20id%3D%223%22/%3E</map>
+        <text>Ok</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Button" x="885" y="836" w="65" h="27" measuredW="51" measuredH="27" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>hasil%20model%26bm%3Bhasil%20model.bmml%26bm%3Bhasil%20model.bmml%26bm%3Bhasil%20model.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22728%2C799%2C793%2C826%22%20href%3D%22hasil%2520model.bmml%22%20alt%3D%22hasil%20model%22%20id%3D%224%22/%3E</map>
+        <text>Back</text>
+        <underline>false</underline>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::TextArea" x="282" y="642" w="-1" h="-1" measuredW="200" measuredH="140" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Note%20%3A%0ADibasis%20data%20hanya%20mengambil%20semua%20proses%20yang%20sudah%20diisi%20pada%20form%20proses%20yaitu%20nama%20proses%20dan%20juga%20parent%20prosesnya</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

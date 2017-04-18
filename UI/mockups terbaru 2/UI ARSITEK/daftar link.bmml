@@ -1,0 +1,99 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="892" measuredH="445" mockupW="450" mockupH="423">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="442" y="22" w="450" h="423" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>A%20Web%20Page%0Ahttp%3A//togaftools.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::CheckBox" x="495" y="145" w="42" h="22" measuredW="42" measuredH="22" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Null</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::CheckBox" x="495" y="259" w="60" h="22" measuredW="48" measuredH="22" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>link%20data%26bm%3Blink%20data.bmml%26bm%3Blink%20data.bmml%26bm%3Blink%20data.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2253%2C237%2C113%2C259%22%20href%3D%22link%2520data.bmml%22%20alt%3D%22link%20data%22%20id%3D%223%22/%3E</map>
+        <text>Data</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::CheckBox" x="495" y="280" w="82" h="22" measuredW="66" measuredH="22" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>link%20aplikasi%20%26bm%3Blink%20aplikasi%20.bmml%26bm%3Blink%20aplikasi%20.bmml%26bm%3Blink%20aplikasi%20.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2253%2C258%2C135%2C280%22%20href%3D%22link%2520aplikasi%2520.bmml%22%20alt%3D%22link%20aplikasi%20%22%20id%3D%224%22/%3E</map>
+        <text>Aplikasi</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::CheckBox" x="495" y="191" w="75" h="22" measuredW="60" measuredH="22" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>link%20tujuan%26bm%3Blink%20tujuan.bmml%26bm%3Blink%20tujuan.bmml%26bm%3Blink%20tujuan.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2253%2C169%2C128%2C191%22%20href%3D%22link%2520tujuan.bmml%22%20alt%3D%22link%20tujuan%22%20id%3D%225%22/%3E</map>
+        <text>Tujuan</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Label" x="490" y="103" w="84" h="-1" measuredW="84" measuredH="32" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <size>24</size>
+        <text>Link%20Ke</text>
+        <underline>true</underline>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::CheckBox" x="495" y="167" w="103" h="22" measuredW="84" measuredH="22" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>link%20organisasi%26bm%3Blink%20organisasi.bmml%26bm%3Blink%20organisasi.bmml%26bm%3Blink%20organisasi.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2253%2C145%2C156%2C167%22%20href%3D%22link%2520organisasi.bmml%22%20alt%3D%22link%20organisasi%22%20id%3D%227%22/%3E</map>
+        <text>Organisasi</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::CheckBox" x="495" y="237" w="75" h="22" measuredW="61" measuredH="22" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>link%20proses%26bm%3Blink%20proses.bmml%26bm%3Blink%20proses.bmml%26bm%3Blink%20proses.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2253%2C215%2C128%2C237%22%20href%3D%22link%2520proses.bmml%22%20alt%3D%22link%20proses%22%20id%3D%228%22/%3E</map>
+        <text>Proses</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::CheckBox" x="495" y="214" w="82" h="22" measuredW="67" measuredH="22" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>link%20jabatan%26bm%3Blink%20jabatan.bmml%26bm%3Blink%20jabatan.bmml%26bm%3Blink%20jabatan.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2253%2C192%2C135%2C214%22%20href%3D%22link%2520jabatan.bmml%22%20alt%3D%22link%20jabatan%22%20id%3D%229%22/%3E</map>
+        <text>Jabatan</text>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::Button" x="812" y="382" w="51" h="26" measuredW="51" measuredH="27" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>membuatmodelEA%26bm%3BmembuatmodelEA.bmml%26bm%3BmembuatmodelEA.bmml%26bm%3BmembuatmodelEA.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22370%2C360%2C421%2C386%22%20href%3D%22membuatmodelEA.bmml%22%20alt%3D%22membuatmodelEA%22%20id%3D%2210%22/%3E</map>
+        <text>Back</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::CheckBox" x="495" y="302" w="81" h="22" measuredW="70" measuredH="22" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>link%20aktifitas%26bm%3Blink%20aktifitas.bmml%26bm%3Blink%20aktifitas.bmml%26bm%3Blink%20aktifitas.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2253%2C280%2C134%2C302%22%20href%3D%22link%2520aktifitas.bmml%22%20alt%3D%22link%20aktifitas%22%20id%3D%2211%22/%3E</map>
+        <text>Aktifitas</text>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::CheckBox" x="495" y="327" w="117" h="22" measuredW="103" measuredH="22" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>link%20decision%20point%26bm%3Blink%20decision%20point.bmml%26bm%3Blink%20decision%20point.bmml%26bm%3Blink%20decision%20point.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2253%2C305%2C170%2C327%22%20href%3D%22link%2520decision%2520point.bmml%22%20alt%3D%22link%20decision%20point%22%20id%3D%2212%22/%3E</map>
+        <text>Decision%20Point</text>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::CheckBox" x="495" y="349" w="66" h="22" measuredW="55" measuredH="22" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>link%20event%26bm%3Blink%20event.bmml%26bm%3Blink%20event.bmml%26bm%3Blink%20event.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2253%2C327%2C119%2C349%22%20href%3D%22link%2520event.bmml%22%20alt%3D%22link%20event%22%20id%3D%2213%22/%3E</map>
+        <text>Event</text>
+      </controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::CheckBox" x="495" y="371" w="90" h="22" measuredW="75" measuredH="22" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>link%20teknologi%26bm%3Blink%20teknologi.bmml%26bm%3Blink%20teknologi.bmml%26bm%3Blink%20teknologi.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2253%2C349%2C143%2C371%22%20href%3D%22link%2520teknologi.bmml%22%20alt%3D%22link%20teknologi%22%20id%3D%2214%22/%3E</map>
+        <text>Teknologi</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

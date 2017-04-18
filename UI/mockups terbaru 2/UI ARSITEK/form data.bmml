@@ -1,0 +1,73 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1145" measuredH="431" mockupW="908" mockupH="367">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="237" y="64" w="908" h="367" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>A%20Web%20Page%0Ahttp%3A//togaftools.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::DataGrid" x="311" y="184" w="761" h="164" measuredW="734" measuredH="81" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Nama%20Data%2C%20List%20Atribut%2C%20Parent%2C%20Link%20ke%20Form%2C%20Terima%20Link%20dari%20Form%2C%20Edit%2C%20Delete%2C%20Link%0AInternet%20Booking%20Access%2C%20id%20nama%20alamat%20no%20tlp%2C%20Null/Root%0ACustomer%20Autonomy%2C%20id%20nama%20alamat%20no%20tlp%2C%20Null/Root</text>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Label" x="634" y="147" w="-1" h="-1" measuredW="95" measuredH="28" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>20</size>
+        <text>Form%20Data</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Button" x="964" y="369" w="53" h="27" measuredW="45" measuredH="27" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>editor%20form%20data%26bm%3Beditor%20form%20data.bmml%26bm%3Beditor%20form%20data.bmml%26bm%3Beditor%20form%20data.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22727%2C305%2C780%2C332%22%20href%3D%22editor%2520form%2520data.bmml%22%20alt%3D%22editor%20form%20data%22%20id%3D%223%22/%3E</map>
+        <text>Add</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Button" x="1024" y="369" w="48" h="27" measuredW="40" measuredH="27" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>membuatmodelEA%26bm%3BmembuatmodelEA.bmml%26bm%3BmembuatmodelEA.bmml%26bm%3BmembuatmodelEA.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22787%2C305%2C835%2C332%22%20href%3D%22membuatmodelEA.bmml%22%20alt%3D%22membuatmodelEA%22%20id%3D%224%22/%3E</map>
+        <text>Ok</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Icon" x="937" y="212" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>editor%20form%20data%26bm%3Beditor%20form%20data.bmml%26bm%3Beditor%20form%20data.bmml%26bm%3Beditor%20form%20data.bmml</href>
+        <icon>PencilIcon%7Cxsmall</icon>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22700%2C148%2C716%2C164%22%20href%3D%22editor%2520form%2520data.bmml%22%20alt%3D%22editor%20form%20data%22%20id%3D%225%22/%3E</map>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Icon" x="982" y="212" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>Trash2Icon%7Cxsmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Icon" x="937" y="239" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>editor%20form%20data%26bm%3Beditor%20form%20data.bmml%26bm%3Beditor%20form%20data.bmml%26bm%3Beditor%20form%20data.bmml</href>
+        <icon>PencilIcon%7Cxsmall</icon>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22700%2C175%2C716%2C191%22%20href%3D%22editor%2520form%2520data.bmml%22%20alt%3D%22editor%20form%20data%22%20id%3D%227%22/%3E</map>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Icon" x="982" y="239" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>Trash2Icon%7Cxsmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::Icon" x="1024" y="212" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>add%20link%26bm%3Badd%20link.bmml%26bm%3Badd%20link.bmml%26bm%3Badd%20link.bmml</href>
+        <icon>SimpleArrowIcon%7Cxsmall</icon>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22787%2C148%2C803%2C164%22%20href%3D%22add%2520link.bmml%22%20alt%3D%22add%20link%22%20id%3D%229%22/%3E</map>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::Icon" x="1024" y="239" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>add%20link%26bm%3Badd%20link.bmml%26bm%3Badd%20link.bmml%26bm%3Badd%20link.bmml</href>
+        <icon>SimpleArrowIcon%7Cxsmall</icon>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22787%2C175%2C803%2C191%22%20href%3D%22add%2520link.bmml%22%20alt%3D%22add%20link%22%20id%3D%2210%22/%3E</map>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

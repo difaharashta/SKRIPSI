@@ -1,0 +1,23 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="890" measuredH="610" mockupW="497" mockupH="558">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="393" y="52" w="497" h="558" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>A%20Web%20Page%0Ahttp%3A//togaftools.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::Accordion" x="555" y="157" w="178" h="300" measuredW="150" measuredH="375" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs>%2Cform%20organisasi%26bm%3Bform%20organisasi.bmml%26bm%3Bform%20organisasi.bmml%26bm%3Bform%20organisasi.bmml%2Cform%20visi%26bm%3Bform%20visi.bmml%26bm%3Bform%20visi.bmml%26bm%3Bform%20visi.bmml%2Cform%20misi%26bm%3Bform%20misi.bmml%26bm%3Bform%20misi.bmml%26bm%3Bform%20misi.bmml%2Cform%20tujuan%26bm%3Bform%20tujuan.bmml%26bm%3Bform%20tujuan.bmml%26bm%3Bform%20tujuan.bmml%2Cform%20jabatan%26bm%3Bform%20jabatan.bmml%26bm%3Bform%20jabatan.bmml%26bm%3Bform%20jabatan.bmml%2Cform%20proses%26bm%3Bform%20proses.bmml%26bm%3Bform%20proses.bmml%26bm%3Bform%20proses.bmml%2Cform%20aktifitas%26bm%3Bform%20aktifitas.bmml%26bm%3Bform%20aktifitas.bmml%26bm%3Bform%20aktifitas.bmml%2Cform%20data%26bm%3Bform%20data.bmml%26bm%3Bform%20data.bmml%26bm%3Bform%20data.bmml%2Cform%20aplikasi%26bm%3Bform%20aplikasi.bmml%26bm%3Bform%20aplikasi.bmml%26bm%3Bform%20aplikasi.bmml%2Cform%20teknologi%26bm%3Bform%20teknologi.bmml%26bm%3Bform%20teknologi.bmml%26bm%3Bform%20teknologi.bmml</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22162%2C132%2C340%2C162%22%20href%3D%22form%2520organisasi.bmml%22%20alt%3D%22form%20organisasi%22%20id%3D%221%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22162%2C159%2C340%2C189%22%20href%3D%22form%2520visi.bmml%22%20alt%3D%22form%20visi%22%20id%3D%221%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22162%2C186%2C340%2C216%22%20href%3D%22form%2520misi.bmml%22%20alt%3D%22form%20misi%22%20id%3D%221%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22162%2C213%2C340%2C243%22%20href%3D%22form%2520tujuan.bmml%22%20alt%3D%22form%20tujuan%22%20id%3D%221%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22162%2C240%2C340%2C270%22%20href%3D%22form%2520jabatan.bmml%22%20alt%3D%22form%20jabatan%22%20id%3D%221%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22162%2C267%2C340%2C297%22%20href%3D%22form%2520proses.bmml%22%20alt%3D%22form%20proses%22%20id%3D%221%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22162%2C294%2C340%2C324%22%20href%3D%22form%2520aktifitas.bmml%22%20alt%3D%22form%20aktifitas%22%20id%3D%221%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22162%2C321%2C340%2C351%22%20href%3D%22form%2520data.bmml%22%20alt%3D%22form%20data%22%20id%3D%221%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22162%2C348%2C340%2C378%22%20href%3D%22form%2520aplikasi.bmml%22%20alt%3D%22form%20aplikasi%22%20id%3D%221%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22162%2C375%2C340%2C405%22%20href%3D%22form%2520teknologi.bmml%22%20alt%3D%22form%20teknologi%22%20id%3D%221%22/%3E</map>
+        <text>Katalog%0AForm%20Organisasi%0AForm%20Visi%0AForm%20Misi%0AForm%20Tujuan%0AForm%20Jabatan%0AForm%20Proses%0AForm%20Aktifitas%0AForm%20Data%0AForm%20Aplikasi%0AForm%20Teknologi</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Button" x="807" y="538" w="-1" h="-1" measuredW="51" measuredH="27" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>membuatmodelEA%26bm%3BmembuatmodelEA.bmml%26bm%3BmembuatmodelEA.bmml%26bm%3BmembuatmodelEA.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22414%2C486%2C465%2C513%22%20href%3D%22membuatmodelEA.bmml%22%20alt%3D%22membuatmodelEA%22%20id%3D%222%22/%3E</map>
+        <text>Back</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

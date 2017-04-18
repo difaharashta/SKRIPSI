@@ -1,0 +1,79 @@
+(Beres)
+1. konfirmasi pass ga berguna, karna kalo masukin konfirmasi pass yg beda dgn pass ga ngaruh tetep ke save
+
+(Beres == ini maksudnya yang ada di perusahaan pertama akan muncul juga di perusahaan ke dua kan??????????????
+soalnya awalnya itu form/katalog itu unik di tiap tiap perusahaannya)
+2. ketika ada 2 perusahaan yang akan dimodelkan oleh arsitek. lalu arsitek sudah memodelkan
+perusahaan pertama, pas arsitek mau modelin perusahaan kedua data-data form/katalog yang udah dimodelin di
+perusahaan pertama muncul di perusahaan 2 
+
+
+3. Kalo buat arsitek baru juga data-data yg udah diisi arsitek lain ada di perusahaan arsitek baru
+
+(Beres)
+4. yang tampil di link mapping pada value chain hanya yang parentnya root saja
+
+(Beres)
+5. terima link ke form seharusnya tulisannya jadi terima link dari form
+
+(Beres)
+6. edit form ga keubah datanya kalo diedit
+
+
+(Beres | How to : delete link kemudia bisa di add lagi)
+7. gimana caranya kalo hasil diagram/matrix mau diubah? soalnya di edit form cuma ada nama, deskripsi dan parent seharusnya ada daftar (link ke form dan terima link dari form)
+dan daftar tersebut bisa dihapus sehingga user bisa add link baru dan menjadi diagram/matrix baru
+
+
+(Berees)
+8. form people kok ga ada? soalnya di mockups ada udah dicantumin mas coba liat mockups pas di editor form jabatan ada icon buat link ke editor form people
+(isi form people apa aja itu juga ada di mockups)
+
+
+(Beres)
+9. Di matrix dan form pakein pemisah antar kolom
+
+(Beres)
+10. Tambahin view form di preliminary pada view tracebility
+
+
+
+
+
+
+(Beres)
+11. export xml masih error
+
+
+(SUDAH SESUAI, SETIAP PERUSAHAAN SUDAH SESUAI DENGAN KATALOG YANG SUDAH DIBUAT, DIAGRAM MANA SAJA YANG SUDAH DIBUAT DAN MATRIKS MANA SAJA YANG SUDAH DIBUAT 
+SEMUA YANG SUDAH DI MODELKAN OLEH PERUSAHAAN ITU AKAN MUNCUL 
+DAN YANG BELUM ITU GA BAKAL MUNCUL 
+INI PER PERUSAHAAN BUKAN PER ARSITEK
+)
+12. di admin, button "lihat hasil model" itu katalog, matrix dan diagram
+yg belum dimodelkan oleh arsitek muncul di daftar katalog/matrix/diagram. 
+kayanya karena data diperusahaan A masuk juga ke perusahaan B 
+
+
+(BERES)
+13. di admin kolom action ga usah ada edit data arsitek (yang ada cuma delete) karena admin ga bisa edit data arsitek
+
+
+
+(
+INI BELUM soalnya bingung, == dan INI BERARTI YANG INTERNAL DAN EXTERNAL GA GUNA LAGI?
+DAN YANG OTOMATIS MASUK KE JABATAN ITU GA GUNA LAGI ?
+nnt bsok pagi kabarin ya kalo ini bener bner fix
+)
+14. form jabatan kayanya ga usah ada mas dihapus aja
+lalu form stakeholder diganti nama jadi form jabatan (cuma diganti nama aja mas isinya tetep form stakeholder) dan bisa edit dan add link
+
+
+
+
+
+
+1 13 2 3 4 14 5 6 8 9 10 7 11 12 preli
+14 5 6 8 9 10 4 av
+14 5 7 
+

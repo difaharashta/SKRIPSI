@@ -1,0 +1,43 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1097" measuredH="466" mockupW="723" mockupH="429">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="374" y="37" w="723" h="429" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>A%20Web%20Page%0Ahttp%3A//togaftools.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::TitleWindow" x="509" y="139" w="417" h="274" measuredW="450" measuredH="400" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Editor%20Form%20Jabatan</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Label" x="539" y="192" w="-1" h="-1" measuredW="54" measuredH="21" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Jabatan%20%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::TextInput" x="684" y="189" w="220" h="-1" measuredW="79" measuredH="26" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Button" x="829" y="349" w="75" h="27" measuredW="40" measuredH="27" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>form%20jabatan%26bm%3Bform%20jabatan.bmml%26bm%3Bform%20jabatan.bmml%26bm%3Bform%20jabatan.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22455%2C312%2C530%2C339%22%20href%3D%22form%2520jabatan.bmml%22%20alt%3D%22form%20jabatan%22%20id%3D%224%22/%3E</map>
+        <text>Ok</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Label" x="538" y="230" w="-1" h="-1" measuredW="93" measuredH="21" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Parent%20jabatan%20%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::ComboBox" x="685" y="226" w="219" h="-1" measuredW="30" measuredH="24" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>parent%20jabatan%26bm%3Bparent%20jabatan.bmml%26bm%3Bparent%20jabatan.bmml%26bm%3Bparent%20jabatan.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22311%2C189%2C530%2C213%22%20href%3D%22parent%2520jabatan.bmml%22%20alt%3D%22parent%20jabatan%22%20id%3D%226%22/%3E</map>
+        <text/>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
