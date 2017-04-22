@@ -52,7 +52,6 @@ Raphael.fn.connection = function (obj1, obj2, style) {
             for (var i = 0; i < 4; i++) {
                 /* loop the seond object's connection coordinates */
                 for (var j = 4; j < 8; j++) {
-                    //Math.abs mengembalikan
                     var dx = Math.abs(p[i].x - p[j].x),
                         dy = Math.abs(p[i].y - p[j].y);
                     if ((i == j - 4) || (((i != 3 && j != 6) || p[i].x < p[j].x) && ((i != 2 && j != 7) || p[i].x > p[j].x) && ((i != 0 && j != 5) || p[i].y > p[j].y) && ((i != 1 && j != 4) || p[i].y < p[j].y))) {
@@ -74,8 +73,7 @@ Raphael.fn.connection = function (obj1, obj2, style) {
                 x3 = [0, 0, 0, 0, x4, x4, x4 - dx, x4 + dx][res[1]].toFixed(3),
                 y3 = [0, 0, 0, 0, y1 + dy, y1 - dy, y4, y4][res[1]].toFixed(3);
             /* assemble path and arrow */
-            //bikin jalur ke arrow
-            var path = ["M", x1.toFixed(3), y1.toFixed(3), "L", x1, y1, x4, y4, x4.toFixed(3), y4.toFixed(3)].join(",");
+            var path = ["M", x1.toFixed(3), y1.toFixed(3), "C", x2, y2, x3, y3, x4.toFixed(3), y4.toFixed(3)].join(",");
 
             /* arrow */
             if(style && style.directed) {
@@ -85,15 +83,16 @@ Raphael.fn.connection = function (obj1, obj2, style) {
                 var norm = function(x,l){return (-x*(l||5)/mag);};
                 /* calculate array coordinates (two lines orthogonal to the path vector) */
                 var arr = [
-                    {x:(norm(x4-x1)+norm(y4-y1)+x4).toFixed(3), y:(norm(y4-y1)+norm(x4-x1)+y4).toFixed(3)},
-                    {x:(norm(x4-x1)-norm(y4-y1)+x4).toFixed(3), y:(norm(y4-y1)-norm(x4-x1)+y4).toFixed(3)}
+                    {x:(norm(x4-x3)+norm(y4-y3)+x4).toFixed(3), y:(norm(y4-y3)+norm(x4-x3)+y4).toFixed(3)},
+                    {x:(norm(x4-x3)-norm(y4-y3)+x4).toFixed(3), y:(norm(y4-y3)-norm(x4-x3)+y4).toFixed(3)}
                 ];
-                path = path+ ", M"+arr[0].x+","+arr[0].y+",L"+x4+","+y4+",L"+arr[1].x+","+arr[1].y;
+                path = path + ",M"+arr[0].x+","+arr[0].y+",L"+x4+","+y4+",L"+arr[1].x+","+arr[1].y;
 
             }
             //adanya perubahan variable path
 
             //  path = ["M", x1, y1, "L",  x4, y4];
+
 
 
 
@@ -111,10 +110,8 @@ Raphael.fn.connection = function (obj1, obj2, style) {
             style && style.label && style["label-style"] && edge.label && edge.label.attr(style["label-style"]);
             style && style.callback && style.callback(edge);
         }
-    
     }
     edge.draw();
-
     return edge;
 };
 //Raphael.prototype.set.prototype.dodo=function(){console.log("works");};

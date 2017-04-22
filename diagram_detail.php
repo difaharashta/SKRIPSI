@@ -161,6 +161,10 @@
 							<button type="submit" class="btn btn-success back" name="Simpan Koordinat">
 									Simpan Koordinat
 							</button>
+							<button type="button" class="btn btn-success back" name="Reset Koordinat" onclick="resetKoordinat()" >
+									Reset Koordinat
+
+							</button>
 							</form>
    <?php
   				}
@@ -200,7 +204,7 @@
     <script type="text/javascript">
 
 
-var redraw, g, renderer;
+var redraw, g, renderer, resetKoordinat;
 
 /* only do all this when document has finished loading (needed for RaphaelJS) */
 window.onload = function() {
@@ -233,10 +237,10 @@ window.onload = function() {
 
 				$queryDiagram = mysql_query("select * from diagrams where id_form='".$dataParent[$i+1]."' AND `id_diagram`='$id'");
 						$diagrams = mysql_fetch_array($queryDiagram);
-						if ($diagrams['x']==null) {
+						if (!isset($diagrams['x']) || $diagrams['x']==null) {
 							$diagrams['x'] = 0;
 						}
-						if ($diagrams['y']==null) {
+						if (!isset($diagrams['y']) || $diagrams['y']==null) {
 							$diagrams['y'] = 0;
 						}
 
@@ -264,8 +268,8 @@ var render= function(r, n) {
 
 			//variable untuk mencocokan file images dengan nama katalog dari suatu diagram
 			//x dan y berguna untuk menambahkan koordinat awal dengan koordinat yang akan di simpan
-			var img = r.image("images/icon/<?php echo $dataKatalog['nama_katalog']; ?>.jpg", -15+x,-10+y, 30, 20);
-			var txt = r.text(0+x, 35+y, n.label)
+			var img = r.image("images/icon/<?php echo $dataKatalog['nama_katalog']; ?>.jpg", 0, 0, 30, 20);
+			var txt = r.text(15, 45, n.label)
 
 			.attr({"font-size":"10px","text-align":"center"})
 
@@ -275,6 +279,9 @@ var render= function(r, n) {
 			});
 
 			var set = r.set().push(img).push(txt);
+			//translate berguna untuk menggeser sebesar x,y
+			//getBBox untuk mendapatkan koordinatnya
+			set.translate(x-set.getBBox().x,y-set.getBBox().y);
 			sets[<?php echo $diagrams['id_form'];?>] = set;
 
 						//setiap img ikon yang diklik, akan mengembalikan koordinatnya dengan memanfaatkan method getBBox
@@ -397,176 +404,243 @@ var render= function(r, n) {
 
     /* layout the graph using the Spring layout implementation */
 		//menggunakan layout yang diambil dari dracula_graph.js
+		resetKoordinat = function(){
+
+			//Find parents
+			var parents = [<?php
+				$queryParent= mysql_query("
+						select distinct id_architecture, form_dari
+						from Link
+						where
+						id_perusahaan=$idperusahaan AND
+						type_architecture='diagram' AND
+						id_architecture=$id AND
+						form_dari NOT IN
+						(select distinct form_ke from Link
+						where id_perusahaan=$idperusahaan AND
+						type_architecture='diagram' AND
+						id_architecture=$id)
+				");
+				$isHead = true;
+				while($parent = mysql_fetch_array($queryParent)) {
+					if ($isHead) {
+						$isHead = false;
+						echo "\"".$parent['form_dari']."\"";
+					} else {
+						echo ",\"".$parent['form_dari']."\"";
+					}
+				}
+			?>];
+
+			var childs = [<?php
+					$query = mysql_query("
+					SELECT distinct form_ke
+					FROM `LINK` join FORM
+							on(form.id_form=link.form_ke)
+							WHERE type_architecture='diagram' AND
+							id_architecture=$id AND
+							link.id_perusahaan=$idperusahaan
+					");
+					$isChilds=true;
+					while($childs=mysql_fetch_array($query)){
+						if($isChilds){
+
+								$isChilds=false;
+								echo ",\"".$childs['form_ke']."\"";
+						}
+						else{
+								echo ",\"".$childs['form_ke']."\"";
+						}
+					}
+				?>
+			];
+
+
+			console.log("childs:", childs);
+			console.log("childslength:", childs.length);
+			console.log("PARENTS:", parents);
+			console.log("parentslength:", parents.length);
+			console.log(forms);
+			console.log("edges:", edges);
+
+
+			//set koordinat Parent-nya pada awal Penggambaran
+			function redraw(key, xCoord, yCoord) {
+				sets[key].translate(xCoord-sets[key].getBBox().x,yCoord-sets[key].getBBox().y);
+				forms[key].x = sets[key].getBBox().x;
+				forms[key].y = sets[key].getBBox().y;
+				$("#koordinat").val(JSON.stringify(forms));
+			}
+			var marginX = 20, marginY = 20;
+			//margin Y + (100*i) berguna agar tiap node parent memiliki koordinat Y yang berbeda
+			for (var i = 0; i < parents.length; i++) {
+				//memanggil fungsi redraw
+				redraw(parents[i], marginX,100*i+marginY);
+			}
+
+
+			//sets[key] maupun forms[key] berisi diagrams['id_form']
+
+			function DFSCalc() {
+				var width = 0;
+				var height = 0;
+				var visited = {};
+				var origin = {};
+				var availSlot = [];
+
+				var stack = [];
+				//masukkan semua parents ke dalam stack
+				for (var i = 0; i < parents.length; i++) {
+					stack.push(parents[i]);
+				}
+
+				//selama stack masih berisi
+				while (stack.length>0) {
+					//jika ada isinya, pop() masukkin ke var node
+					var node = stack.pop();
+
+					//jika kondisi node belum dikunjungi
+					//maka node ditandai sudah dikunjungi
+					if (visited[node]!=true) {
+						visited[node] = true;
+						//edges[] berisi keterhubungan parent dengan childnya
+						//jika suatu node masih memiliki child
+						if (edges[node]!=null) {
+							for (var i = 0; i < edges[node].length; i++) {
+								//untuk setiap anak-anak dari Node, mereka punya origin siapa / siapa yang menunjuk edges tersebut
+
+								//melegitimasi  bahwa origin nya itu si Node
+								//lalu men-set
+								if (origin[edges[node][i]]==null) origin[edges[node][i]] = node;
+
+								//push setiap anak-anaknya
+								stack.push(edges[node][i]);
+							}
+						}
+
+						//current level
+						var curr = 0;
+
+						//node yang sekarang diganti
+						//node jadi currNode
+						var currNode = node;
+
+						//selama currNode punya origin, dan bukan parent
+						//maka curr++(levelnya nambah karena bergeser posisi node yang ditinjau)
+						while (origin[currNode]!=null) {
+							curr++;
+							//karena prosesnya bergeser, currNode diganti jadi Origin. Udah sampai di ujung(rootnya)
+							currNode = origin[currNode];
+						}
+						//dimulai dari availSlot[0]
+
+						if (availSlot[curr]==null) availSlot[curr] = 0;
+						availSlot[curr]++;
+						console.log("slot:" , availSlot.length);
+					}
+				}
+
+				//height =0
+				//jila availSlot > height
+				//maka height = availSlot
+				for (var i = 0; i < availSlot.length; i++) {
+					if (availSlot[i]>height) {
+						height = availSlot[i];
+					}
+				}
+
+				width = availSlot.length;
+
+				console.log("Width:",width);
+				console.log("Height:",height);
+				return {width:width, height:height};
+			}
+
+
+			function DFSTransform(start, availSlot, addedToGrid, height) {
+				//start: awal mula menelusuri node
+				var visited = {};
+				var origin = {};
+
+				//var horizontal
+				var hSpacing = parseInt(($('svg').width()-marginX*2)/availSlot.length);
+
+				//var vertical
+				var vSpacing = parseInt(($('svg').height()-marginY*2)/height);
+
+				//start itu parentsnya
+				var stack = [start];
+
+				//selama di stack masih ada
+				while (stack.length>0) {
+					var node = stack.pop();
+
+					if (visited[node]!=true) {
+						visited[node] = true;
+						if (edges[node]!=null) {
+							for (var i = 0; i < edges[node].length; i++) {
+
+								if (origin[edges[node][i]]==null) origin[edges[node][i]] = node;
+								stack.push(edges[node][i]);
+							}
+						}
+
+						//current mulai dari 0 karena menentukan index
+						var curr = 0;
+						var currNode = node;
+						while (origin[currNode]!=null) {
+							curr++;
+							currNode = origin[currNode];
+						}
+
+						//addedToGrid untuk catat node apa saja yang sudah di draw
+						//kondisi jika node belum pernah di draw atau masuk ke grid, maka panggil method redraw
+						//
+						if (addedToGrid.indexOf(node)==-1) {
+							//x: marginX + hoirzontal Spacing*currentLevel
+							//current utk menentukan node berada di level berapa
+							//node[i] akan sama denga curr Levelnya
+							redraw(node, marginX+hSpacing*curr, marginY+availSlot[curr]*vSpacing);
+
+							//availSlot[] yang sudah terpakai, node selanjutnya akan ditaruh di bawahnya
+							availSlot[curr]++;
+							//node yang sekarang di masukan ke dalam grid, maka di push
+							addedToGrid.push(node);
+						}
+					}
+				}
+			}
+
+			var dimension = DFSCalc();
+			var availSlot = [];
+
+			//setelah tau dimensi width
+			//availSlot[] jadi 0 yang artinya grid2 tersedia untuk di draw
+			for (var i = 0; i < dimension.width; i++) {
+				availSlot[i] = 0;
+			}
+
+			var addedToGrid = [];
+
+			//untuk semua parents jalankan DFSTransform
+			for (var i = 0; i < parents.length; i++) {
+				DFSTransform(parents[i], availSlot, addedToGrid, dimension.height);
+			}
+
+
+			//untuk menyambungkan lagi node dengan edgenya
+			//atau dapat disebut juga untuk menyambungkan ikon-ikon dengan linknya
+			for (var i = 0; i < g.edges.length; i++) {
+				//mengambil method connection dari Dracula_graph
+				g.edges[i].connection.draw();
+			}
+		};
+
     var layouter = new Graph.Layout.Ordered(g);
-		var debug = true;
-		if (existUnmodified || debug) {
+
+		if (existUnmodified) {
 				// Susun ulang diagram
-				setTimeout(function(){
-
-					//Find parents
-					var parents = [<?php
-						$queryParent= mysql_query("
-								select distinct id_architecture, form_dari
-								from Link
-								where
-								id_perusahaan=$idperusahaan AND
-								type_architecture='diagram' AND
-								id_architecture=$id AND
-								form_dari NOT IN
-								(select distinct form_ke from Link
-								where id_perusahaan=$idperusahaan AND
-								type_architecture='diagram' AND
-								id_architecture=$id)
-						");
-						$isHead = true;
-						while($parent = mysql_fetch_array($queryParent)) {
-							if ($isHead) {
-								$isHead = false;
-								echo "\"".$parent['form_dari']."\"";
-							} else {
-								echo ",\"".$parent['form_dari']."\"";
-							}
-						}
-					?>];
-
-					var childs = [<?php
-							$query = mysql_query("
-							SELECT distinct form_ke
-							FROM `LINK` join FORM
-									on(form.id_form=link.form_ke)
-				  				WHERE type_architecture='diagram' AND
-									id_architecture=$id AND
-									link.id_perusahaan=$idperusahaan
-							");
-							$isChilds=true;
-							while($childs=mysql_fetch_array($query)){
-								if($isChilds){
-										
-										$isChilds=false;
-										echo ",\"".$childs['form_ke']."\"";
-								}
-								else{
-										echo ",\"".$childs['form_ke']."\"";
-								}
-							}
-						?>
-					];
-
-
-					console.log("childs:", childs);
-					console.log("childslength:", childs.length);
-					console.log("PARENTS:", parents);
-					console.log("parentslength:", parents.length);
-
-
-					//set koordinat Parent-nya pada awal Penggambaran
-					function redraw(key, xCoord, yCoord) {
-						sets[key].translate(xCoord-sets[key].getBBox().x,yCoord-sets[key].getBBox().y);
-						forms[key].x = xCoord;
-						forms[key].y = yCoord;
-					}
-					var marginX = 20, marginY = 20;
-					//margin Y + (100*i) berguna agar tiap node parent memiliki koordinat Y yang berbeda
-					for (var i = 0; i < parents.length; i++) {
-						//memanggil fungsi redraw
-						redraw(parents[i], marginX,100*i+marginY);
-					}
-
-
-					//sets[key] maupun forms[key] berisi diagrams['id_form']
-					//set koordinat Child Percobaan1
-					function redrawChild(key, xCoord, yCoord) {
-						sets[key].translate(xCoord-sets[key].getBBox().x,yCoord-sets[key].getBBox().y);
-						forms[key].x = xCoord;
-						forms[key].y = yCoord;
-					}
-					for (var i = 0; i < childs.length; i++) {
-						//memanggil fungsi redraw
-						redrawChild(childs[i], marginX,100*i+marginY);
-					}
-
-
-					//set koordinat child
-					function algoritma(){
-						var visited={};
-						var stack = {};
-						var node={};
-						var level;
-
-					}
-
-
-					//set koordinat child
-					function DFSCalc(node) {
-						var width = 0;
-						var visited = {};
-						var origin = {};
-
-						var stack = [parents];
-
-						while (stack.length>0) {
-							var node = stack.pop();
-
-							if (visited[node]!=true) {
-								visited[node] = true;
-								if (edges[node]!=null) {
-									for (var i = 0; i < edges[node].length; i++) {
-										origin[edges[node][i]] = node;
-										stack.push(edges[node][i]);
-									}
-								}
-								var curr = 1;
-								var currNode = node;
-								while (origin[currNode]!=null) {
-									curr++;
-									currNode = origin[currNode];
-								}
-								if (curr>width) {
-									width = curr;
-								}
-							}
-						}
-
-						return width;
-						console.log("Width:",width);
-					}
-
-
-					function DFSTransform(node, width) {
-							var stack = [edges];
-
-							while(stack.length>0){
-								var node = stack.push();
-
-								for(var i=0; i<stack.length; i++)
-								{
-
-									if(stack[node][i]!=null && visited[i]==false)
-									{
-										stack.push(stack[node][i]);
-										visited[i]=true;
-										redraw(stack[i], 100*i + marginX, 100*i+marginY);
-									}
-								}
-
-							}
-						}
-
-					for (var i = 0; i < parents.length; i++) {
-						var width = DFSCalc(parents[i]);
-						console.log("Max ["+i+"]:", width);
-						DFSTransform(edges[i], width);
-						console.log("Parents[i]", parents[i]);
-					}
-
-
-					//untuk menyambungkan lagi node dengan edgenya
-					//atau dapat disebut juga untuk menyambungkan ikon-ikon dengan linknya
-					for (var i = 0; i < g.edges.length; i++) {
-						//mengambil method connection dari Dracula_graph
-						g.edges[i].connection.draw();
-					}
-				},0);
+				setTimeout(resetKoordinat,0);
 									//matrix.x=1000;
 							//matrix.y=-20;
 }
