@@ -2,6 +2,19 @@
 
 	include 'header.php';
 
+	?>
+	<div id="modalLink" class="modal">
+		<div class="modal-content" id="show">
+			<span class="close">&times;</span>
+		</div>
+	</div>
+
+
+
+	<?php
+
+
+
 
 
   $id = $_GET['id'];
@@ -15,6 +28,7 @@
 			mysql_query("UPDATE `diagrams` SET `x`='".$value->x."', `y`='".$value->y."' WHERE `id_form` = '$key' AND `id_diagram`='$id';");
 		}
 	}
+
 
   //buat nama diagram
   $query = "select * from togaf_diagram where id_diagram='$id'";
@@ -102,7 +116,7 @@
             </p>
             <div class="row">
                 <div class="col-md-12">
-                    <h3 style="margin:0px;margni-top:25px;text-align:center;">
+                    <h3 style="margin:0px;margin-top:25px;text-align:center;">
                         <?php
                         //tampilkan nama diagram
                           echo strtoupper($dataDiagram['nama_diagram']);
@@ -114,7 +128,7 @@
                     </div>
 	<div id="keterangan">
 	<p>Keterangan</p>
-	<small>Klik 2 kali pada Teks di Ikon untuk Lakukan Edit Form</small>
+
 		<table>
 			<tr>
 		<?php
@@ -124,11 +138,22 @@
 		?>
 				<td>
 
-					<a href="form-add.php?id= <?php echo $dataKatalogs['id_katalog']; ?>"><img width="25px" src="images/icon/<?php echo $dataKatalogs['nama_katalog']; ?>.jpg"></a>
+					<img width="25px" src="images/icon/<?php echo $dataKatalogs['nama_katalog']; ?>.jpg"></a>
 				</td>
+
 				<td>
-					<a href="form-add.php?id= <?php echo $dataKatalogs['id_katalog']; ?>"><?php echo ucwords($dataKatalogs['nama_katalog']); ?></a>
+
+
+						<a href="form.php?id=
+						<?php
+						echo $dataKatalogs['id_katalog']; ?>"> <?php echo ucwords($dataKatalogs['nama_katalog']);
+						?>
+						</a>
+
+
+
 				</td>
+
 
 		<?php
 		}
@@ -148,15 +173,17 @@
 					if(isset($_GET['idper']) && $_GET['idper']!=""){
 					?>
 
-            <a href="admin/model-perusahaan.php?id=<?php echo $_GET['idper'] ?>" class="btn btn-danger back">Kembali Ke Admin</a>
+					<a href="admin/model-perusahaan.php?id=<?php echo $_GET['idper'] ?>" class="btn btn-danger back">Kembali Ke Admin</a>
 					<?php
-  				}
+					}
+
 					else{
 
 					?>
 
 							<form method="POST">
 							<input type="hidden" name="koordinat" id="koordinat" value="">
+
 							<a  onclick="window.history.back(-1)" class="btn btn-danger back">Kembali</a>
 							<button type="submit" class="btn btn-success back" name="Simpan Koordinat">
 									Simpan Koordinat
@@ -178,17 +205,13 @@
 
 
 </body>
-  <!-- jQuery Version 1.11.0 -->
-    <script src="admin/js/jquery-1.11.0.js"></script>
 
+  	<!-- jQuery Version 1.11.0 -->
+    <script src="admin/js/jquery-1.11.0.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="admin/js/bootstrap.min.js"></script>
-
     <!-- Metis Menu Plugin JavaScript -->
     <script src="admin/js/plugins/metisMenu/metisMenu.min.js"></script>
-
-
-
     <!-- DataTables JavaScript -->
     <script src="admin/js/plugins/dataTables/jquery.dataTables.js"></script>
     <script src="admin/js/plugins/dataTables/dataTables.bootstrap.js"></script>
@@ -196,15 +219,15 @@
     <!-- Custom Theme JavaScript -->
     <script src="js/sb-admin-2.js"></script>
 
- <script type="text/javascript" src="js/raphael-min.js"></script>
+ 		<script type="text/javascript" src="js/raphael-min.js"></script>
     <script type="text/javascript" src="js/dracula_graffle.js"></script>
-     <script src="admin/js/jquery-1.11.0.js"></script>
- <script type="text/javascript" src="js/dracula_graph.js"></script>
- <script type="text/javascript" src="js/dracula_algorithm.js"></script>
+    <script src="admin/js/jquery-1.11.0.js"></script>
+ 		<script type="text/javascript" src="js/dracula_graph.js"></script>
+ 		<script type="text/javascript" src="js/dracula_algorithm.js"></script>
     <script type="text/javascript">
 
 
-var redraw, g, renderer, resetKoordinat;
+var redraw, g, renderer, resetKoordinat, isRootless=false;
 
 /* only do all this when document has finished loading (needed for RaphaelJS) */
 window.onload = function() {
@@ -219,14 +242,11 @@ window.onload = function() {
 
 		//sets array berisi idForm dari tabel diagrams, bedanya sets digunakan untuk men-set koordinat
 		var sets = {};
+
+		//edges untuk melihat keterhubungan antar form
 		var edges = {};
-
 		var existUnmodified = false;
-
     g = new Graph();
-
-
-
 
     <?php
 
@@ -235,8 +255,11 @@ window.onload = function() {
         $queryCekKatalog = mysql_query("select * from form join togaf_katalog using(id_katalog) where id_form='".$dataParent[$i+1]."'");
         $dataKatalog = mysql_fetch_array($queryCekKatalog);
 
+				//perlu penjelasan
 				$queryDiagram = mysql_query("select * from diagrams where id_form='".$dataParent[$i+1]."' AND `id_diagram`='$id'");
 						$diagrams = mysql_fetch_array($queryDiagram);
+						//jka x null atau tidak ada, maka x = 0
+						//jika y null atau tidak ada, maka y=0
 						if (!isset($diagrams['x']) || $diagrams['x']==null) {
 							$diagrams['x'] = 0;
 						}
@@ -244,6 +267,7 @@ window.onload = function() {
 							$diagrams['y'] = 0;
 						}
 
+						//jika x dan y = 0, maka existUnmodified=true.
 						if ($diagrams['x']==0 && $diagrams['y']==0) {
 							?>
 							existUnmodified = true;
@@ -263,38 +287,46 @@ var render= function(r, n) {
 			var x =  <?php echo $diagrams['x']; ?>,
 					y = <?php echo $diagrams['y']; ?>;
 
+			//mengisi array forms dengan id_form yang berasal dari tabel diagrams
+			//menamai 'x' dengan x, 'y' dengan y
 			forms[<?php echo $diagrams['id_form'];?>]= {x:x, y:y};
 			$("#koordinat").val(JSON.stringify(forms));
+
 
 			//variable untuk mencocokan file images dengan nama katalog dari suatu diagram
 			//x dan y berguna untuk menambahkan koordinat awal dengan koordinat yang akan di simpan
 			var img = r.image("images/icon/<?php echo $dataKatalog['nama_katalog']; ?>.jpg", 0, 0, 30, 20);
+
+
+			//dari raphael-min js
 			var txt = r.text(15, 45, n.label)
 
-			.attr({"font-size":"10px","text-align":"center"})
-
+			.attr({"font-size":"10px","text-align":"center" })
 			//fungsi double click pada text(deskripsi) untuk melakukan edit form
 			.dblclick(function(){
 							window.location = "form-edit.php?id="+n.id_katalog+"&idform="+n.id_form+"&redir=<?php echo urlencode("diagram_detail.php?id=".$id); ?>";
+
 			});
 
 			var set = r.set().push(img).push(txt);
 			//translate berguna untuk menggeser sebesar x,y
+			// x dan y berasal dari atribut x dan y pada tabel diagrams
 			//getBBox untuk mendapatkan koordinatnya
+
 			set.translate(x-set.getBBox().x,y-set.getBBox().y);
-			sets[<?php echo $diagrams['id_form'];?>] = set;
+			sets[<?php echo $diagrams['id_form'];?>]= set;
 
 						//setiap img ikon yang diklik, akan mengembalikan koordinatnya dengan memanfaatkan method getBBox
 							img.click(function(){
-								forms[<?php echo $dataKatalog['id_form']; ?>].x = set.getBBox().x;
-								forms[<?php echo $dataKatalog['id_form']; ?>].y = set.getBBox().y;
+								forms[<?php echo $diagrams['id_form']; ?>].x = set.getBBox().x;
+								forms[<?php echo $diagrams['id_form']; ?>].y = set.getBBox().y;
 								$("#koordinat").val(JSON.stringify(forms));
 					});
 
 					//setiap text(deskripsi ikon) yang diklik, akan mengembalikan koordinatnya dengan memanfaatkan method getBBox
 							txt.click(function(){
-								forms[<?php echo $dataKatalog['id_form']; ?>].x = set.getBBox().x;
-								forms[<?php echo $dataKatalog['id_form']; ?>].y = set.getBBox().y;
+								forms[<?php echo $diagrams['id_form']; ?>].x = set.getBBox().x;
+								forms[<?php echo $diagrams['id_form']; ?>].y = set.getBBox().y;
 								$("#koordinat").val(JSON.stringify(forms));
 					});
 
@@ -349,6 +381,7 @@ var render= function(r, n) {
                         directed: true,
                         stroke : "#aaa", //warna
                         label : "<<<?php echo $dataChild['nama_link'] ?>>>"
+
 											});
 
 
@@ -404,56 +437,56 @@ var render= function(r, n) {
 
     /* layout the graph using the Spring layout implementation */
 		//menggunakan layout yang diambil dari dracula_graph.js
-		resetKoordinat = function(){
 
-			//Find parents
-			var parents = [<?php
-				$queryParent= mysql_query("
-						select distinct id_architecture, form_dari
-						from Link
-						where
-						id_perusahaan=$idperusahaan AND
-						type_architecture='diagram' AND
+		var parents = [<?php
+			$queryParent= mysql_query("
+					select distinct id_architecture, form_dari
+					from Link
+					where
+					id_perusahaan=$idperusahaan AND
+					type_architecture='diagram' AND
+					id_architecture=$id AND
+					form_dari NOT IN
+					(select distinct form_ke from Link
+					where id_perusahaan=$idperusahaan AND
+					type_architecture='diagram' AND
+					id_architecture=$id)
+			");
+			$isHead = true;
+			while($parent = mysql_fetch_array($queryParent)) {
+				if ($isHead) {
+					$isHead = false;
+					echo "\"".$parent['form_dari']."\"";
+				} else {
+					echo ",\"".$parent['form_dari']."\"";
+				}
+			}
+		?>];
+
+		var childs = [<?php
+				$query = mysql_query("
+				SELECT distinct form_ke
+				FROM `LINK` join FORM
+						on(form.id_form=link.form_ke)
+						WHERE type_architecture='diagram' AND
 						id_architecture=$id AND
-						form_dari NOT IN
-						(select distinct form_ke from Link
-						where id_perusahaan=$idperusahaan AND
-						type_architecture='diagram' AND
-						id_architecture=$id)
+						link.id_perusahaan=$idperusahaan
 				");
-				$isHead = true;
-				while($parent = mysql_fetch_array($queryParent)) {
-					if ($isHead) {
-						$isHead = false;
-						echo "\"".$parent['form_dari']."\"";
-					} else {
-						echo ",\"".$parent['form_dari']."\"";
+				$isChilds=true;
+				while($childs=mysql_fetch_array($query)){
+					if($isChilds){
+
+							$isChilds=false;
+							echo ",\"".$childs['form_ke']."\"";
+					}
+					else{
+							echo ",\"".$childs['form_ke']."\"";
 					}
 				}
-			?>];
+			?>
+		];
 
-			var childs = [<?php
-					$query = mysql_query("
-					SELECT distinct form_ke
-					FROM `LINK` join FORM
-							on(form.id_form=link.form_ke)
-							WHERE type_architecture='diagram' AND
-							id_architecture=$id AND
-							link.id_perusahaan=$idperusahaan
-					");
-					$isChilds=true;
-					while($childs=mysql_fetch_array($query)){
-						if($isChilds){
-
-								$isChilds=false;
-								echo ",\"".$childs['form_ke']."\"";
-						}
-						else{
-								echo ",\"".$childs['form_ke']."\"";
-						}
-					}
-				?>
-			];
+		resetKoordinat = function(){
 
 
 			console.log("childs:", childs);
@@ -634,28 +667,27 @@ var render= function(r, n) {
 				//mengambil method connection dari Dracula_graph
 				g.edges[i].connection.draw();
 			}
+
 		};
 
-    var layouter = new Graph.Layout.Ordered(g);
+		if(parents.length==0){
+			var layouter = new Graph.Layout.Spring(g);
+			resetKoordinat = function(){
 
-		if (existUnmodified) {
-				// Susun ulang diagram
-				setTimeout(resetKoordinat,0);
-									//matrix.x=1000;
-							//matrix.y=-20;
-}
+			};
+		} else {
+			var layouter = new Graph.Layout.Ordered(g);
+			if (existUnmodified) {
+					// Susun ulang diagram
+					setTimeout(resetKoordinat,0);
+										//matrix.x=1000;
+								//matrix.y=-20;
+			}
+		}
 
 
     /* draw the graph using the RaphaelJS draw implementation */
     renderer = new Graph.Renderer.Raphael('diagram', g, width, height);
-
-
-//algoritma Penggambaran diagram
-var queue=[];
-
-//metod poll untuk di java
-var cek = queue.shift();
-
 
 
 

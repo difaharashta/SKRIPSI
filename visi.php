@@ -1,6 +1,18 @@
 <?php
   include 'header.php';
- 
+
+
+    if(isset($_GET['id_per'])){
+        if($_GET['idper']!=""){
+              $idperusahaan = $_GET['idper'];
+        }else{
+              $idperusahaan = $_SESSION['perusahaan_id'];
+        }
+
+    }else{
+            $idperusahaan = $_SESSION['perusahaan_id'];
+    }
+
 ?>
 
     <div id="wrapper">
@@ -47,15 +59,11 @@
                       </tr>
                       <?php
                       $no=1;
-  if($_GET['idper']!=""){
-    $idperusahaan = $_GET['idper'];
-  }else{
-    $idperusahaan = $_SESSION['perusahaan_id'];
-  }
+
 
                       $query = mysql_query("select * from visi where id_perusahaan='$idperusahaan'");
    while($data=mysql_fetch_array($query)){
-                                       
+
     ?>
 
     <tr>
@@ -78,7 +86,7 @@
 }
     ?>
                     </table>
-    
+
 
 
 
@@ -95,4 +103,3 @@
 <?php
   include 'footer.php';
 ?>
-

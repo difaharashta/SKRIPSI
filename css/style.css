@@ -18,7 +18,7 @@ text-align: center;
 }
 .box hr{
 padding:0px;
-margin:0px !important;	
+margin:0px !important;
 }
 .error{
 	color:red;
@@ -26,7 +26,7 @@ margin:0px !important;
 }
 .childkatalog ul{
 	margin:0px;
-	padding:0px;	
+	padding:0px;
 }
 .childkatalog ul li{
 	list-style:none;
@@ -43,7 +43,7 @@ margin:0px !important;
 	text-align: center;
 	margin:0px;
 	padding:10px;
-	
+
 }
 .katalogclick{
 	border-radius:0px !important;
@@ -136,6 +136,7 @@ table tr th{
 li.child:hover{
 	cursor: pointer;
 }
+
 #link li.parent ul li.child{
 	list-style: none;
 	color: white;

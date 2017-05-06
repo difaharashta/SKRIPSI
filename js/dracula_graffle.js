@@ -52,7 +52,6 @@ Raphael.fn.connection = function (obj1, obj2, style) {
             for (var i = 0; i < 4; i++) {
                 /* loop the seond object's connection coordinates */
                 for (var j = 4; j < 8; j++) {
-                    //Math.abs mengembalikan
                     var dx = Math.abs(p[i].x - p[j].x),
                         dy = Math.abs(p[i].y - p[j].y);
                     if ((i == j - 4) || (((i != 3 && j != 6) || p[i].x < p[j].x) && ((i != 2 && j != 7) || p[i].x > p[j].x) && ((i != 0 && j != 5) || p[i].y > p[j].y) && ((i != 1 && j != 4) || p[i].y < p[j].y))) {
@@ -74,26 +73,45 @@ Raphael.fn.connection = function (obj1, obj2, style) {
                 x3 = [0, 0, 0, 0, x4, x4, x4 - dx, x4 + dx][res[1]].toFixed(3),
                 y3 = [0, 0, 0, 0, y1 + dy, y1 - dy, y4, y4][res[1]].toFixed(3);
             /* assemble path and arrow */
-            //bikin jalur ke arrow
-            var path = ["M", x1.toFixed(3), y1.toFixed(3), "L", x1, y1, x4, y4, x4.toFixed(3), y4.toFixed(3)].join(",");
+            var path = ["M", x1.toFixed(3), y1.toFixed(3), "L",  x4.toFixed(3), y4.toFixed(3)].join(",");
 
             /* arrow */
+
+
             if(style && style.directed) {
                 /* magnitude, length of the last path vector */
                 var mag = Math.sqrt((y4 - y3) * (y4 - y3) + (x4 - x3) * (x4 - x3));
                 /* vector normalisation to specified length  */
                 var norm = function(x,l){return (-x*(l||5)/mag);};
+
+                var h = Math.sqrt(Math.pow((x1-x4),2)+Math.pow((y1-y4),2));
+                var udx = (x1-x4)/h;
+                var udy = (y1-y4)/h;
+                ax = udx * Math.sqrt(3)/2 - udy * 1/2;
+                ay = udx * 1/2 + udy * Math.sqrt(3)/2;
+                bx = udx * Math.sqrt(3)/2 + udy * 1/2;
+                by =  -udx * 1/2 + udy * Math.sqrt(3)/2;
+
                 /* calculate array coordinates (two lines orthogonal to the path vector) */
                 var arr = [
-                    {x:(norm(x4-x1)+norm(y4-y1)+x4).toFixed(3), y:(norm(y4-y1)+norm(x4-x1)+y4).toFixed(3)},
-                    {x:(norm(x4-x1)-norm(y4-y1)+x4).toFixed(3), y:(norm(y4-y1)-norm(x4-x1)+y4).toFixed(3)}
+                    {x:x4+10*ax, y:y4+10*ay},
+                    {x:x4+10*bx, y:y4+10*by},
+
+                    // //menambahkan array baru
+                    // {x:(norm(x4-x2)-norm(y4-y2)+x4).toFixed(3), y:(norm(y4-y2)-norm(x4-x2)+y4).toFixed(3)},
+                     //{x:(norm(x4-x2)-norm(y4-y2)+x4).toFixed(3), y:(norm(y4-y2)-norm(x4-x2)+y4).toFixed(3)}
                 ];
-                path = path+ ", M"+arr[0].x+","+arr[0].y+",L"+x4+","+y4+",L"+arr[1].x+","+arr[1].y;
+
+                path = path + ",M"+arr[0].x+","+arr[0].y+",L"+x4+
+                        ","+y4+",L"+arr[1].x+","+arr[1].y
+                        // ","+y4+",L"+arr[2].x+","+arr[2].y
+                        //","+y4+",L"+arr[3].x+","+arr[3].y;
 
             }
             //adanya perubahan variable path
 
             //  path = ["M", x1, y1, "L",  x4, y4];
+
 
 
 
@@ -107,14 +125,24 @@ Raphael.fn.connection = function (obj1, obj2, style) {
             /* setting label */
             style && style.label
                 && (edge.label && edge.label.attr({x:(x1+x4)/2, y:(y1+y4)/2})
-                    || (edge.label = selfRef.text((x1+x4)/2, (y1+y4)/2, style.label).attr({fill: "#000", "font-size": style["font-size"] || "12px"})));
+                    || (edge.label = selfRef.text((x1+x4)/2, (y1+y4)/2, style.label).attr({fill: "#000", "font-size": style["font-size"] || "11px"})));
             style && style.label && style["label-style"] && edge.label && edge.label.attr(style["label-style"]);
             style && style.callback && style.callback(edge);
-        }
-    
-    }
-    edge.draw();
 
+
+
+        }
+
+    }
+
+    edge.draw();
     return edge;
+
 };
+
+
+
+
+
+
 //Raphael.prototype.set.prototype.dodo=function(){console.log("works");};

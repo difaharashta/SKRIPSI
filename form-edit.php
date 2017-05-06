@@ -90,14 +90,14 @@
 						}
             //Tempat button edit melakukan submit untuk kembali ke halaman diagram
     ?>
-<?php
-    if(isset($_GET['redir'])){
-    ?>
-    <input type="hidden" name="redir" value= "<?= $_GET['redir']?>"/>
+      <?php
+        if(isset($_GET['redir'])){
+          ?>
+          <input type="hidden" name="redir" value= "<?= $_GET['redir']?>"/>
 
-    <?php
-    }
-    ?>
+          <?php
+        }
+        ?>
 
 
 
@@ -118,7 +118,8 @@
     </div>
     <!-- /#wrapper -->
     <?php
-}else{
+}
+  else{
  $queryForm = "select * from form join stackholder using(id_form) where id_katalog='".$id."' and id_form='$idform'";
 
   $dataForm = mysql_fetch_array(mysql_query($queryForm));
@@ -142,7 +143,18 @@
                         EDIT <?php echo strtoupper($dataTogaf['nama_katalog']); ?>
                     </h3>
                     <hr style="margin:0px;padding:10px;"/>
+
+                    <!-- Form Dimulai -->
                     <form action="form-update.php" method="post">
+                      <?php
+                          if(isset($_GET['redir'])){
+                            ?>
+                          <input type="hidden" name="redir" value= "<?= $_GET['redir']?>"/>
+
+                          <?php
+                          }
+                          ?>
+
                         <div class="form-group">
                             <label> Nama <?php echo ucwords($dataTogaf['nama_katalog']); ?></label>
                             <input type="hidden" value="<?php echo $id; ?>" name="id"/>

@@ -6,10 +6,13 @@
 	$deskripsi = $_POST['deskripsi'];
 	$parent = $_POST['parent'];
 
+
+
 	if($id!="14"){
     mysql_query("UPDATE `form` SET `nama`='$nama',`deskripsi`='$deskripsi',`parent`='$parent' WHERE id_form='$idform'");
 
 	}else{
+
 
 		$class = $_POST['class'];
 		$status = $_POST['status'];
@@ -36,6 +39,8 @@
 	    	// mysql_query("UPDATE `form` SET `nama`='$nama',`deskripsi`='$deskripsi',`parent`='$parent' WHERE id_form='$ids'");
 
 		// }
+
+		
 	}
 
 	//kalo yang keluar itu dengan nama 'redir' maka kembali ke halaman dengan nama 'redir'

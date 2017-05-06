@@ -25,21 +25,28 @@
                     </h3>
                     <hr style="margin:0px;padding:10px;"/>
                     <form action="form-insert.php" method="post">
-						
-						
+
+
                         <div class="form-group">
-                            <label> 						  <?php if($id!=4){
-							  
-						  echo "Nama "; 
+                            <label>
+							
+						<?php 
+						if($id!=4){
+
+						  echo "Nama ";
 						  }
+						  //agar "Nama " + nama_katalog yang sedang dibuka
 							echo ucwords($dataTogaf['nama_katalog']); ?></label>
                             <input type="hidden" value="<?php echo $id; ?>" name="id"/>
                             <textarea type="text" class="form-control" name="nama"></textarea>
                         </div>
 						
-						<?php 
+						<?php
+						//Jika tidak 1=organisasi, 4=tujuan, 7=aktivitas, 11=decision point, 12=event, 13=lokasi organisasi
+						// maka akan ditampilkan Deskripsi
+						
 						if($dataTogaf['id_katalog']!=7 && $dataTogaf['id_katalog']!=4 && $dataTogaf['id_katalog']!=11 && $dataTogaf['id_katalog']!=12 && $dataTogaf['id_katalog']!=1 && $dataTogaf['id_katalog']!=13){
-							
+
 							?>
                         <div class="form-group">
                             <label> Deskripsi  <?php echo ucwords($dataTogaf['nama_katalog']); ?></label>
@@ -47,6 +54,8 @@
                         </div>
 						<?php
 						}
+						//Jika tidak 4=tujuan, 7=aktivitas, 11=decision point, 12=event
+						// maka akan ditampilkan tipe Parent-nya
 						if($dataTogaf['id_katalog']!=7 && $dataTogaf['id_katalog']!=4 && $dataTogaf['id_katalog']!=11 && $dataTogaf['id_katalog']!=12){
 						?>
                         <div class="form-group">
@@ -59,21 +68,22 @@
                                     $query = mysql_query("select * from form where id_katalog='$id' and id_perusahaan='$idperusahaan'");
                                     while($data=mysql_fetch_array($query)){
                                 ?>
+								
                                 <option value="<?php echo $data['nama'] ?>"><?php echo $data['nama']; ?></option>
 
-                                <?php  
-                                }                      
+                                <?php
+                                }
                                 ?>
 
                             </select>
-                            
+
                         </div>
                        <?php
 						}
 					   ?>
 
                      <button type="submit" class="form-control btn btn-success">Tambah </button>
-                                   
+
 
                     </form>
 
@@ -116,8 +126,8 @@ else
                             <input type="hidden" value="<?php echo $id; ?>" name="id"/>
                             <input required type="text" class="form-control" name="nama"/>
                         </div>
-                        
-                        
+
+
                          <div class="form-group">
                             <label>Parent Jabatan</label>
                             <select name="parent" class="form-control">
@@ -130,12 +140,12 @@ else
                                 ?>
                                 <option value="<?php echo $data['nama'] ?>"><?php echo $data['nama']; ?></option>
 
-                                <?php  
-                                }                      
+                                <?php
+                                }
                                 ?>
 
                             </select>
-                            
+
                         </div>
                         <div class="form-group">
                             <label> Class </label>
@@ -144,7 +154,7 @@ else
                                 <option value="Keep Informed">Keep Informed</option>
 								<option value="Key Players">Key Players</option>
 								<option value="	">Minimal Efford</option>
-                                
+
                             </select>
                         </div>
 <div class="form-group">
@@ -155,10 +165,10 @@ else
                             </select>
                         </div>
 
-                        
-                       
+
+
                      <button type="submit" class="form-control btn btn-success">Tambah </button>
-                                   
+
 
                     </form>
 
@@ -179,4 +189,3 @@ else
 <?php
 	include 'footer.php';
 ?>
-

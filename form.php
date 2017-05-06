@@ -55,12 +55,12 @@
                     </h3>
                     <hr style="margin:0px;padding:10px;"/>
                     <p style="margin:10px;text-align:right">
-					  <a href="daftarform.php?id=<?php echo $id; ?>" class="btn btn-success">Form  <?php echo ucwords($dataTogaf['nama_katalog']); ?> </a>
+					  <a href="daftarform.php?id=<?php echo $id; ?>" class="btn btn-success"> Lihat Form  <?php echo ucwords($dataTogaf['nama_katalog']); ?> </a>
             <?php
             if($id!=5){
 
             ?>
-                      <a href="form-add.php?id=<?php echo $id; ?>" class="btn btn-success">Add</a>
+                      <a href="form-add.php?id=<?php echo $id; ?>" class="btn btn-success">Add Form </a>
                       <?php
                     }
                     ?>
@@ -212,7 +212,8 @@
 
 
           //proses mengambil form dari
-
+		  //sehingga form dari akan langsung mengembalikan 'form_dari' dari database
+		
            $queryDari="select * from form join togaf_katalog using(id_katalog) where id_form='".$dataKe['form_dari']."'";
           $exeDari = mysql_query($queryDari);
           $dataDari=mysql_fetch_array($exeDari);
