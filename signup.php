@@ -2,12 +2,12 @@
 session_start();
 if(isset($_SESSION['art_username'])){
     header("location:index.php");
-} 
+}
 	$provinsi =  array("Aceh", "Sumatera Utara", "Sumatera Barat", "Riau", "Jambi", "Sumatera Selatan", "Lampung", "Bengkulu", "Bangka Belitung", "Kepulauan Riau", "Jakarta", "Jawa Barat", "Jawa Tengah", "Yogyakarta", "Jawa Timur", "Banten", "Bali", "Nusa Tenggara Barat", "Nusa Tenggara Timur", "Kalimantan Barat", "Kalimantan Timur", "Kalimantan Tengah", "Kalimantan Selatan", "Sulawesi Utara", "Sulawesi Tengah", "Sulawesi Selatan", "Sulawesi Tenggara", "Gorontalo", "Sulawesi Barat", "Maluku", "Maluku Utara", "Papua", "Papua Barat");
 
 ?>
 <!DOCTYPE html>
-    <html lang="en">            
+    <html lang="en">
 
 <head>
 
@@ -28,7 +28,7 @@ if(isset($_SESSION['art_username'])){
     <!-- Custom CSS -->
     <link href="admin/css/sb-admin-2.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    
+
 
 
     <!-- Custom Fonts -->
@@ -48,7 +48,7 @@ if(isset($_SESSION['art_username'])){
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                
+
                 <div class="login-panel panel panel-default" style="margin-top:10%">
                     <div class="panel-heading">
                         <h3 class="panel-title" style="text-align:center">Register</h3>
@@ -87,7 +87,7 @@ if(isset($_SESSION['art_username'])){
                                             <?php
 											for($i=0;$i<count($provinsi);$i++){
 												?>
-												<option <?php 
+												<option <?php
 												if($provinsi[$i]==$data['architect_provinsi']){
 													echo "selected";
 												}
@@ -108,10 +108,10 @@ if(isset($_SESSION['art_username'])){
                                             <input required class="form-control" type="number" name="hp" placeholder="Masukkan Nomor Telepon/Handphone"/>
                                         </div>
                                         <button type="submit" class="form-control btn btn-success">Register </button>
-                                        
+
                                     </form>
                                      <p class="error">
-                                <?php 
+                                <?php
                                 if(isset($_GET['error'])){
                                     echo $_GET['error'];
                                 }

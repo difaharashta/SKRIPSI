@@ -1,8 +1,19 @@
 <?php
   include 'header.php';
   //ini ngambil id form dari
-  $id = $_GET['formid'];
-  
+  if(isset($_GET['formid'])){
+    if($id = $_GET['formid']!=""){
+        $id = $_GET['formid'];
+    }
+    else{
+        $id = $_GET['formid'];
+    }
+  }
+  else{
+      $id = $_GET['formid'];
+  }
+
+
   //ini id_togaf!=1 karna preliminary ga dimunculin
   $query = mysql_query("select * from togaf_model where id_togaf!=1");
 ?>
@@ -14,7 +25,7 @@
   ?>
 
       <div id="page-wrapper">
-        
+
         <ul id="link">
           <?php
           while ($data=mysql_fetch_array($query)) {
@@ -32,7 +43,7 @@
                     <p>
                       <a href="linkke.php?idarc=<?php echo $dataMatr['id_matriks']; ?>&formid=<?php echo $id; ?>&type=matriks">
                        <?php echo $dataMatr['nama_matriks'];
-							echo " Matriks"; 
+							echo " Matriks";
 					   ?>
                       </a>
                     </p>
@@ -46,14 +57,14 @@
                     <p>
 					<!-- -->
                       <a href="linkke.php?idarc=<?php echo $dataDiagram['id_diagram']; ?>&formid=<?php echo $id; ?>&type=diagram">
-                    <?php echo $dataDiagram['nama_diagram']; 
+                    <?php echo $dataDiagram['nama_diagram'];
 						echo " Diagram";
 					?>
                   </a>
                     </p>
                    </li>
                    <?php
-                 } 
+                 }
                 ?>
               </ul>
             </li>
@@ -71,4 +82,3 @@
 <?php
   include 'footer.php';
 ?>
-

@@ -4,11 +4,11 @@ if(!isset($_SESSION['art_username'])){
     header("location:login.php");
 }
 
-$provinsi =  array("Aceh", "Sumatera Utara", "Sumatera Barat", "Riau", "Jambi", "Sumatera Selatan", "Lampung", "Bengkulu", "Bangka Belitung", "Kepulauan Riau", "Jakarta", "Jawa Barat", "Jawa Tengah", "Yogyakarta", "Jawa Timur", "Banten", "Bali", "Nusa Tenggara Barat", "Nusa Tenggara Timur", "Kalimantan Barat", "Kalimantan Timur", "Kalimantan Tengah", "Kalimantan Selatan", "Sulawesi Utara", "Sulawesi Tengah", "Sulawesi Selatan", "Sulawesi Tenggara", "Gorontalo", "Sulawesi Barat", "Maluku", "Maluku Utara", "Papua", "Papua Barat"); 
+$provinsi =  array("Aceh", "Sumatera Utara", "Sumatera Barat", "Riau", "Jambi", "Sumatera Selatan", "Lampung", "Bengkulu", "Bangka Belitung", "Kepulauan Riau", "Jakarta", "Jawa Barat", "Jawa Tengah", "Yogyakarta", "Jawa Timur", "Banten", "Bali", "Nusa Tenggara Barat", "Nusa Tenggara Timur", "Kalimantan Barat", "Kalimantan Timur", "Kalimantan Tengah", "Kalimantan Selatan", "Sulawesi Utara", "Sulawesi Tengah", "Sulawesi Selatan", "Sulawesi Tenggara", "Gorontalo", "Sulawesi Barat", "Maluku", "Maluku Utara", "Papua", "Papua Barat");
 ?>
 
 <!DOCTYPE html>
-    <html lang="en">            
+    <html lang="en">
 
 <head>
 
@@ -29,7 +29,7 @@ $provinsi =  array("Aceh", "Sumatera Utara", "Sumatera Barat", "Riau", "Jambi", 
     <!-- Custom CSS -->
     <link href="admin/css/sb-admin-2.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    
+
 
 
     <!-- Custom Fonts -->
@@ -64,7 +64,7 @@ $provinsi =  array("Aceh", "Sumatera Utara", "Sumatera Barat", "Riau", "Jambi", 
                                             <label>Nama Perusahaan</label>
                                             <input required class="form-control" type="text" name="nama" placeholder="Masukkan Nama Perusahaan"/>
                                         </div>
-                                      
+
                                       <div class="form-group">
                                             <label>Email Perusahaan</label>
                                             <input required class="form-control" type="email" name="email" placeholder="Masukkan Email Perusahaan"/>
@@ -79,7 +79,7 @@ $provinsi =  array("Aceh", "Sumatera Utara", "Sumatera Barat", "Riau", "Jambi", 
                                             <?php
 											for($i=0;$i<count($provinsi);$i++){
 												?>
-												<option <?php 
+												<option <?php
 												if($provinsi[$i]==$data['architect_perusahaan_provinsi']){
 													echo "selected";
 												}
@@ -104,14 +104,14 @@ $provinsi =  array("Aceh", "Sumatera Utara", "Sumatera Barat", "Riau", "Jambi", 
                                             <input class="form-control" type="number" name="fax" placeholder="Masukkan Fax"/>
                                         </div>
                                         <button type="submit" class="form-control btn btn-success">Submit</button>
-                                        
+
                                     </form>
                         </div>
                 </div>
                     </div>
                 </div>
             </div>
-		
+
         </div>
 		<a href="perusahaan.php" class="btn btn-danger back">Kembali</a>
     </div>

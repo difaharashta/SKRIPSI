@@ -7025,7 +7025,7 @@
 
         //element res yang berisi tet dari link ditambahkan fungsi double click
 
-        var res = new Element(el, svg);
+        var res = new Element(el, svg)
         res.attrs = {
             x: x,
             y: y,
@@ -7035,8 +7035,8 @@
             "font-size": R._availableAttrs["font-size"],
             stroke: "none",
             fill: "#000",
-            //ditambahkan cursor: pointer
-          
+
+
         };
         res.type = "text";
         setFillAndStroke(res, res.attrs);

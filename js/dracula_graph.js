@@ -258,10 +258,13 @@ Graph.Renderer.Raphael.prototype = {
 
         shape = node.render(this.r, node).hide();
 
-        shape.attr({"fill-opacity": .6});
+        //perubahan opacity text di dalam node yang di render
+        var text = shape.attr({"fill-opacity": .8});
+
+
         /* re-reference to the node an element belongs to, needed for dragging all elements of a node */
-        //ganti move jadi pointer
-        shape.items.forEach(function(item){ item.set = shape; item.node.style.cursor = "pointer"; });
+        //tidk jadi ganti move jadi pointer, karena cursor: pointer dimasukkan di kode raphael pada diagram_detail
+        shape.items.forEach(function(item){ item.set = shape; item.node.style.cursor = "move"; });
         shape.mousedown(this.dragger);
 
         var box = shape.getBBox();

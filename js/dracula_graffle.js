@@ -77,30 +77,32 @@ Raphael.fn.connection = function (obj1, obj2, style) {
 
             /* arrow */
 
-
             if(style && style.directed) {
-                /* magnitude, length of the last path vector */
-                var mag = Math.sqrt((y4 - y3) * (y4 - y3) + (x4 - x3) * (x4 - x3));
-                /* vector normalisation to specified length  */
-                var norm = function(x,l){return (-x*(l||5)/mag);};
+                            /* magnitude, length of the last path vector */
+                            var mag = Math.sqrt((y4 - y3) * (y4 - y3) + (x4 - x3) * (x4 - x3));
+                            /* vector normalisation to specified length  */
+                            var norm = function(x,l){return (-x*(l||5)/mag);};
 
-                var h = Math.sqrt(Math.pow((x1-x4),2)+Math.pow((y1-y4),2));
-                var udx = (x1-x4)/h;
-                var udy = (y1-y4)/h;
-                ax = udx * Math.sqrt(3)/2 - udy * 1/2;
-                ay = udx * 1/2 + udy * Math.sqrt(3)/2;
-                bx = udx * Math.sqrt(3)/2 + udy * 1/2;
-                by =  -udx * 1/2 + udy * Math.sqrt(3)/2;
+                            var h = Math.sqrt(Math.pow((x1-x4),2)+Math.pow((y1-y4),2));
+                            var udx = (x1-x4)/h;
+                            var udy = (y1-y4)/h;
+                            ax = udx * Math.sqrt(3)/2 - udy * 1/2;
+                            ay = udx * 1/2 + udy * Math.sqrt(3)/2;
+                            bx = udx * Math.sqrt(3)/2 + udy * 1/2;
+                            by =  -udx * 1/2 + udy * Math.sqrt(3)/2;
 
-                /* calculate array coordinates (two lines orthogonal to the path vector) */
-                var arr = [
-                    {x:x4+10*ax, y:y4+10*ay},
-                    {x:x4+10*bx, y:y4+10*by},
+                            /* calculate array coordinates (two lines orthogonal to the path vector) */
+                            var arr = [
+                                {x:x4+10*ax, y:y4+10*ay},
+                                {x:x4+10*bx, y:y4+10*by},
 
-                    // //menambahkan array baru
-                    // {x:(norm(x4-x2)-norm(y4-y2)+x4).toFixed(3), y:(norm(y4-y2)-norm(x4-x2)+y4).toFixed(3)},
-                     //{x:(norm(x4-x2)-norm(y4-y2)+x4).toFixed(3), y:(norm(y4-y2)-norm(x4-x2)+y4).toFixed(3)}
-                ];
+
+
+                                // //menambahkan array baru
+                                // {x:(norm(x4-x2)-norm(y4-y2)+x4).toFixed(3), y:(norm(y4-y2)-norm(x4-x2)+y4).toFixed(3)},
+                                 //{x:(norm(x4-x2)-norm(y4-y2)+x4).toFixed(3), y:(norm(y4-y2)-norm(x4-x2)+y4).toFixed(3)}
+                            ];
+
 
                 path = path + ",M"+arr[0].x+","+arr[0].y+",L"+x4+
                         ","+y4+",L"+arr[1].x+","+arr[1].y
