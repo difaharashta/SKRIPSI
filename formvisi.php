@@ -70,7 +70,9 @@
 
                 </div>
             </div>
-            <a  onclick="window.history.back()" class="btn btn-danger back">Kembali</a>
+            <a  href="admin/model-perusahaan.php?id=<?php echo $_SESSION['perusahaan_id']?>" class="btn btn-danger back">Kembali</a>
+           
+			<!-- <a  onclick="window.history.back()" class="btn btn-danger back">Kembali</a> -->
             <!-- /.row -->
         </div>
         <!-- /#page-wrapper -->

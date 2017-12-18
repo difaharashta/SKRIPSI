@@ -8,18 +8,25 @@
   $idperusahaan = $_SESSION['perusahaan_id'];
   $queryKatalog = "select * from togaf_katalog where id_katalog='$idkatalog'";
   $dataKatalog = mysql_fetch_array(mysql_query($queryKatalog));
+  $queryNama = "select nama from form where id_form='$formid'";
+  $dataNama = mysql_fetch_array(mysql_query($queryNama));
+  
+
   // echo $idarc;
 
 
   if($idkatalog==6 && $idarc==1){
-
-	$query = "select * from form where id_katalog='".$idkatalog."' and id_perusahaan='$idperusahaan' and id_form!='$formid' and parent='root'";
+// jika katalognya adalah form proses dan id architecture = 1 / valuechain, maka ada ditampilkan hanya root saja
+// untuk mendapatkan form_ke. Jadi dicari form selain yang ada di url $formid
+$query = "select * from form where id_katalog='".$idkatalog."' and id_perusahaan='$idperusahaan' and id_form!='$formid' and parent='root'";
 
   }else{
 
   $query = "select * from form where id_katalog='".$idkatalog."' and id_perusahaan='$idperusahaan' and id_form!='$formid'";
   }
   $datas = mysql_query($query);
+
+
 ?>
 
     <div id="wrapper">
@@ -36,7 +43,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <h3 style="margin:0px;margni-top:25px;text-align:center;">
-                        FORM <?php echo strtoupper($dataKatalog['nama_katalog']); ?>
+                        Link Ke FORM <?php echo strtoupper($dataKatalog['nama_katalog']); ?> Dari FORM <?php echo strtoupper($dataNama['nama']);?>
                     </h3>
                     <hr style="margin:0px;padding:10px;"/>
                     <form action="linksubmit.php" method="post">
@@ -70,7 +77,7 @@
 
       <tr>
         <td>
-          <?php echo $no; ?>
+          <?php echo $no; ?> 
         </td>
         <td>
           <input type="text" name="namalink<?php echo $no; ?>"

@@ -183,7 +183,7 @@ if($id!=14){
 
 
                 echo "Generate : ".$namaModel." <br/>Nama Link : ".$dataDari['nama_link']." <br/>Ke Form ".ucwords($dataKe['nama_katalog']);
-                echo "<b> ( ".str_replace("%%","<br>",$dataDari['nama'])." ) </b>";
+                echo "<b> ( ".str_replace("%%","<br>",$dataKe['nama'])." ) </b>";
                 echo "<a href='link-delete.php?idkatalog=".$id."&id=".$dataDari['id_link']."'>Delete</a>";
                 echo "</p>";
               }
@@ -220,7 +220,7 @@ if($id!=14){
 
 
 
-                echo "Generate : ".$namaModel." <br/>Nama Link : ".$dataKe['nama_link']." <br/>Ke Form ".ucwords($dataDari['nama_katalog']);
+                echo "Generate : ".$namaModel." <br/>Nama Link : ".$dataKe['nama_link']." <br/>Dari Form ".ucwords($dataDari['nama_katalog']);
                 echo "<b> ( ".str_replace("%%","<br>",$dataDari['nama'])." ) </b>";
                 echo "<a href='link-delete.php?idkatalog=".$id."&id=".$dataKe['id_link']."'>Delete</a>";
 
@@ -429,7 +429,7 @@ else{
                     $dataDari=mysql_fetch_array($exeDari);
 
                     //nampilin isi tabel link ke form
-                    echo "Generate : ".$namaModel." <br/>Nama Link : ".$dataKe['nama_link']." <br/>Ke Form ".ucwords($dataDari['nama_katalog']);
+                    echo "Generate : ".$namaModel." <br/>Nama Link : ".$dataKe['nama_link']." <br/>Dari Form ".ucwords($dataDari['nama_katalog']);
                     //echo $dataKe['nama_link']." Dari Form ".ucwords($dataDari['nama_katalog']);
                     echo "<b> ( ".$dataDari['nama']." ) </b>";
                     echo "<a href='link-delete.php?idkatalog=".$id."&id=".$dataKe['id_link']."'>Delete</a>";

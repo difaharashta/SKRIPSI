@@ -109,6 +109,11 @@
 
 				$insert = mysql_query("INSERT INTO `link`(`id_architecture`, `id_perusahaan`, `type_architecture`, `form_dari`, `form_ke`, `nama_link`) VALUES ('$idarch','$idperusahaan','diagram','$idfrom','$idto','$link')");
 
+				//insert idform dari dan ke, ke dalam diagrams
+				$insertformdari = mysql_query("INSERT INTO `diagrams`(`id_diagram`, `id_perusahaan`, `id_form`) VALUES ('$idarch','$idperusahaan', '$idfrom')");
+				
+				$insertformke= mysql_query("INSERT INTO `diagrams` (`id_diagram`, `id_perusahaan`, `id_form`) VALUES ('$idarch','$idperusahaan', '$idto')");
+				
 			}
 
 		}

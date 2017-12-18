@@ -1,0 +1,14 @@
+Fase E Opportunities and Solutions: 
+	-Mengidentifikasi peluang-peluang bisnis baru dan menganalisis parameter perusahaan saat ini
+
+Fase F Migration Planning: 
+	-Membuat rencana migrasi dan simulasi dari sebuah implementasi
+
+Fase G Implementation Governance: 
+	-Pengawasan terhadap implementasi dari arsitektur
+
+Fase H Architecture Change Management: 
+	- Menetapkan prosedur untuk mengelola perubahan ke arsitektur baru
+
+Requirements Management 
+	- Pengelolaan kebutuhan arsitektur sepanjang ADM. Secara terus menerus didorong oleh proses Requirements Management

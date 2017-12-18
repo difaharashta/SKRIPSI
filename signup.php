@@ -87,11 +87,9 @@ if(isset($_SESSION['art_username'])){
                                             <?php
 											for($i=0;$i<count($provinsi);$i++){
 												?>
-												<option <?php
-												if($provinsi[$i]==$data['architect_provinsi']){
-													echo "selected";
-												}
-												?>
+												<option 
+												
+												
 												value="<?php
 												echo $provinsi[$i]; ?>"><?php echo $provinsi[$i]; ?></option>
 												<?php

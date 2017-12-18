@@ -8,13 +8,20 @@
 
   if($id==1){
       
-  if($_GET['idper']!=""){
-    $idperusahaan = $_GET['idper'];
-  }else{
-    $idperusahaan = $_SESSION['perusahaan_id'];
-  }
+if(isset($_GET['idper'])){
+	if($_GET['idper']!=""){
+		$idperusahaan = $_GET['idper'];
+	}else{
+		$idperusahaan = $_SESSION['perusahaan_id'];
+	}
+}else{
+	$idperusahaan = $_SESSION['perusahaan_id'];
+}
+  
 
 
+  
+  
 ?>
 
     <div id="wrapper">
@@ -136,11 +143,16 @@
 //buat create tabel
 }else{
 
-    if($_GET['idper']!=""){
-    $idperusahaan = $_GET['idper'];
-  }else{
-    $idperusahaan = $_SESSION['perusahaan_id'];
-  }
+    if(isset($_GET['idper'])){
+	if($_GET['idper']!=""){
+		$idperusahaan = $_GET['idper'];
+	}else{
+		$idperusahaan = $_SESSION['perusahaan_id'];
+	}
+}else{
+	$idperusahaan = $_SESSION['perusahaan_id'];
+}
+  
  //buat ngambil id katalog/form
 $queryMatriksDaris = mysql_query("select * from link join form on(link.form_dari=form.id_form) where id_architecture='$id' and type_architecture='matriks' and link.id_perusahaan='$idperusahaan' group by id_form");
 $queryMatriksKes = mysql_query("select * from link join form on(link.form_ke=form.id_form) where id_architecture='$id' and type_architecture='matriks' and link.id_perusahaan='$idperusahaan' group by id_form");
@@ -246,16 +258,29 @@ $dataKatalogKe = mysql_fetch_array($katalogKe);
                 </div>
             </div>
                   <?php
+	
+if(isset($_GET['idper'])){ 
+				  
   if($_GET['idper']!=""){
    ?>
 
             <a href="admin/model-perusahaan.php?id=<?php echo $_GET['idper'] ?>" class="btn btn-danger back">Kembali Ke Admin</a>
    <?php
   }else{
+	  $idperusahaan = $_SESSION['perusahaan_id'];
 ?>
 
             <!-- <a href="model.php" class="btn btn-danger back">Kembali</a> -->
    <?php  }
+   
+	
+	}else{
+		$idperusahaan = $_SESSION['perusahaan_id'];
+
+	}
+   
+   
+   
             ?>
             <!-- /.row -->
         </div>

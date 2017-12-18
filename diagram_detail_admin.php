@@ -9,14 +9,19 @@ include 'header.php';
 	</div>
 </div>
 
+
+
 <?php
 
-//id = id_diagram
+
+
+
+
 $id = $_GET['id'];
 
 //setiap ada hasil 'koordinat' dari $_POST maka 'koordinat' tersebut di decode ke dalam variable $koordinat
-// lalu $koordinat dijadikan sebagai $key yang berisi idForm
-//value berisi x dan y berupa koordinat yang tadi sudah didapatkan dari getBBox
+// lalu $koordinat dijadikan sebagai variable $key yang berisi idForm
+//variable $koordinat berisi x dan y berupa koordinat yang tadi sudah didapatkan dari getBBox
 if (isset($_POST['koordinat'])) {
 	$koordinat = json_decode($_POST['koordinat']);
 	foreach ($koordinat as $idform => $koordinatForm) {
@@ -60,6 +65,7 @@ SELECT * FROM `LINK`
 WHERE type_architecture='diagram' and
 id_architecture='$id' and
 id_perusahaan='$idperusahaan'");
+
 //fetching data id form nya
 // lalu $dataParent diisi dengan 'form dari' atau 'form_ke'
 while($data=mysql_fetch_array($query)){
@@ -107,6 +113,7 @@ for ($i=1; $i <= count($dataParent); $i++) {
 	<?php
 	include 'nav.php';
 	?>
+
 	<div id="page-wrapper">
 		<p style="font-size:12px;text-align:right;margin-top:10px;font-style:italic">
 			Anda Sedang Menggunakan Perusahaan
@@ -115,45 +122,38 @@ for ($i=1; $i <= count($dataParent); $i++) {
 			echo "<b>".$_SESSION['perusahaan_nama']."</b>";
 			?>
 			
-		</p>		
-		<div class="row">
-		    
-			<div class="col-md-12">
+		</p>
+		<!--
+			<a  onclick="window.history.back(-1)" class="btn btn-danger back">Kembali</a>
 			
+		
+			
+		
+		<form method="POST">
+			<input type="hidden" name="koordinat" id="koordinat" value="">
+
 				
-				<div>
-				<div>
-					<a  style="padding:10px;margin-top:30px" onclick="window.history.back(-1)" 
-					class="btn btn-danger back">Kembali
-					</a>
-				</div>
+			<button type="submit" class="btn btn-success back" name="SimpanKoordinat">
+				Simpan Koordinat
+			</button>
+			<button type="button" class="btn btn-success back" name="Reset Koordinat" onclick="resetKoordinat()" >
+				Reset Koordinat
+
+			</button>
+		</form> -->
+		
+		<div class="row">
+			<div class="col-md-12">
 				<h3 style="margin:0px;margin-top:25px;text-align:center;">
-					
 					<?php
 					//tampilkan nama diagram
 					echo strtoupper($dataDiagram['nama_diagram']);
 					?> DIAGRAM
 				</h3>
-				</div>
-				
 				<hr style="margin:0px;padding:10px;"/>
-				
 				<div style="text-align:right">
 					<!-- <a href="exporttoxml.php?type=diagram&id=<?php echo $id; ?>" class="btn btn-success">Export to XML</a> -->
 				</div>
-				<form method="POST">
-					<input type="text" name="koordinat" id="koordinat" value="">
-
-					<button type="submit" class="btn btn-success back" name="SimpanKoordinat">
-					Simpan Koordinat
-					</button>
-					<button type="button" class="btn btn-success back" name="Reset Koordinat" onclick="resetKoordinat()" >
-					Reset Koordinat
-
-					</button>
-				</form>
-		
-				
 				<div id="keterangan">
 					<p>Keterangan</p>
 
@@ -165,12 +165,17 @@ for ($i=1; $i <= count($dataParent); $i++) {
 
 								?>
 								<td>
+
 									<img width="25px" src="images/icon/<?php echo $dataKatalogs['nama_katalog']; ?>.jpg"></a>
 								</td>
+
 								<td>
+
 									<?php echo ucwords($dataKatalogs['nama_katalog']);
 									?>
 								</td>
+
+
 							<?php
 						}
 						?>
@@ -195,7 +200,9 @@ for ($i=1; $i <= count($dataParent); $i++) {
 
 	else{
 
-		?>		
+		?>
+
+		
 		<?php
 	}
 	?>
@@ -228,6 +235,7 @@ for ($i=1; $i <= count($dataParent); $i++) {
 <script type="text/javascript" src="js/dracula_graph.js"></script>
 <script type="text/javascript" src="js/dracula_algorithm.js"></script>
 <script type="text/javascript">
+
 
 var redraw, g, renderer, resetKoordinat, isRootless=false;
 
@@ -284,8 +292,8 @@ window.onload = function() {
 		//cara buat iconnya disimpan di variable render
 		var render= function(r, n) {
 
-			var koordinatx =  <?php echo $diagrams['x']; ?>,
-			koordinaty = <?php echo $diagrams['y']; ?>;
+			var x =  <?php echo $diagrams['x']; ?>,
+			y = <?php echo $diagrams['y']; ?>;
 
 			//mengisi array forms dengan id_form yang berasal dari tabel diagrams
 			//menamai 'x' dengan x, 'y' dengan y
@@ -297,31 +305,26 @@ window.onload = function() {
 			//if (cond) var x = {greeting: 'hi there'}
 			// creating object with object initializers
 			
-			//forms -> dijadiin objek 
-			forms[<?php echo $diagrams['id_form'];?>]= {x:koordinatx, y:koordinaty};
-			//value dari #koordinat akan di assign dgn value nya jason.stringify
+			forms[<?php echo $diagrams['id_form'];?>]= {x:x, y:y};
 			$("#koordinat").val(JSON.stringify(forms));
-			//$("#koordinat").val(forms);
 
 
 			//variable untuk mencocokan file images dengan nama katalog dari suatu diagram
 			//x dan y berguna untuk menambahkan koordinat awal dengan koordinat yang akan di simpan
-			//if(<?php echo $_GET['id']?> == 2)
-				var img = r.image("images/icon/<?php echo $dataKatalog['nama_katalog']; ?>.jpg", 0, 0, 30, 20);
-
+			var img = r.image("images/icon/<?php echo $dataKatalog['nama_katalog']; ?>.jpg", 0, 0, 30, 20);
 
 			//dari raphael-min
-			var txt = r.text(15, 50, n.label)
-			.attr({"font-size":"11px","text-align":"center", "color":"black", "opacity":"#666"})
+			var txt = r.text(15, 45, n.label)
+			.attr({"font-size":"11px","text-align":"center"})
 			//setiap hover ke text, cursor akan berbentuk pointer
-			.hover(function(){
-				this.attr({"cursor":"pointer"})
-			})
+			//.hover(function(){
+			//	this.attr({"cursor":"pointer"})
+			//})
 			//fungsi double click pada text(deskripsi) untuk melakukan edit form
-			.dblclick(function(){
-				window.location = "form-edit.php?id="+n.id_katalog+"&idform="+n.id_form+"&redir=<?php echo urlencode("diagram_detail.php?id=".$id); ?>";
+			//.dblclick(function(){
+			//	window.location = "form-edit.php?id="+n.id_katalog+"&idform="+n.id_form+"&redir=<?php echo urlencode("diagram_detail.php?id=".$id); ?>";
 
-			});
+			//});
 
 			//it just groups existing elements.
       //Sets act as pseudo elements — all methods available to an element can be used on a set
@@ -345,14 +348,13 @@ window.onload = function() {
 			//rotate, scale, translate(move)
 			//element.rotate(45), element.scale(0.6), translate(50,100)
 			//translate berisi pergeseran x dan y yang dikurangi BBoxnya
-			set.translate(koordinatx-set.getBBox().x,koordinaty-set.getBBox().y);
+			set.translate(x-set.getBBox().x,y-set.getBBox().y);
 			
 			sets[<?php echo $diagrams['id_form'];?>]= set;
 
 			//setiap img ikon yang diklik, akan mengembalikan koordinatnya dengan memanfaatkan method getBBox
 			//.x dan.y merupakan properties dari forms yang berisi BBox dari x dan y 
 			
-			//forms punya variabe x,y diisi dgn getbbox
 			img.click(function(){
 				forms[<?php echo $diagrams['id_form']; ?>].x = set.getBBox().x;
 				forms[<?php echo $diagrams['id_form']; ?>].y = set.getBBox().y;
@@ -381,8 +383,8 @@ console.log("box:", set);
 		g.addNode("<?php echo  $dataParentDiagram[$i]  ?>",
 		{
 			render : render,
-			label : "<?php echo str_replace('()','' ,$dataParentDiagram[$i]) ?>",
-			id_form : "<?php echo $dataIDForm[$i] ?>", 
+			label : "<?php echo str_replace('()','',$dataParentDiagram[$i]) ?>",
+			id_form : "<?php echo $dataIDForm[$i] ?>",
 			id_katalog : "<?php echo $dataIDKatalog[$i] ?>"
 		});
 
@@ -421,14 +423,14 @@ console.log("box:", set);
 					directed: true,
 					stroke : "#aaa",
 					label : "<<<?php echo $dataChild['nama_link'] ?>>>",
+					
+
 				});
-						//label : "<?php echo str_replace('<<>>',' ' ,$dataParentDiagram[$i]) ?>",
 
 
 				if (edges["<?php echo $dataIDForm[$i]; ?>"]==null) {
 					edges["<?php echo $dataIDForm[$i]; ?>"] = [];
 				}
-				//edges=array. 
 				edges["<?php echo $dataIDForm[$i]; ?>"].push("<?php echo $dataChild['id_form']; ?>");
 				
 				var child = ["<?php echo $dataChild['id_form']; ?>"];
@@ -437,11 +439,23 @@ console.log("box:", set);
 				console.log("parent:", parent);
 				var data=["<?php echo $dataChild['id_form']?>"];
 				console.log("d:", data);
+
+
 				
+				
+
+
+
 				<?php
 			}//batas while
+
 		}
+
+
 		?>
+
+
+
 		// var render = function(r, n) {
 		//     console.log(r);
 		//         console.log(n);
@@ -547,6 +561,8 @@ console.log("box:", set);
 			var visited = {};
 			var origin = {};
 			var availSlot = [];
+			
+			
 			var stack = [];
 			//masukkan semua parents ke dalam stack
 			for (var i = 0; i < parents.length; i++) {
@@ -557,6 +573,7 @@ console.log("box:", set);
 			while (stack.length>0) {
 				//jika ada isinya, pop() masukkin ke var node
 				var node = stack.pop();
+
 				//jika kondisi node belum dikunjungi
 				//maka node ditandai sudah dikunjungi
 				if (visited[node]!=true) {
@@ -579,13 +596,12 @@ console.log("box:", set);
 
 					//current level
 					var curr = 0;
-					var curr2 = 0;
 
 					//node yang sekarang diganti
 					//node jadi currNode
 					var currNode = node;
-					//origins selalu di set [] -> selalu kosong, ketika meninjau node yang baru
 					var origins = []; //variable utk tampung origin yang sudah dikunjungi/visited utk cari panjangnya
+
 					//selama currNode punya origin, dan bukan parent
 					//maka curr++(levelnya nambah karena bergeser posisi node yang ditinjau)
 					while (origin[currNode]!=null && origins.indexOf(origin[currNode])==-1) {
@@ -594,15 +610,16 @@ console.log("box:", set);
 						//origins utk tampung origin yg sudah dikunjungi
 						origins.push(origin[currNode]);
 						currNode = origin[currNode];
-					
 					}
 					//dimulai dari availSlot[0]
 					
 					if (availSlot[curr]==null) 
 						availSlot[curr] = 0;
 					availSlot[curr]++;
+
 				}
 			}
+
 			//height =0
 			//jila availSlot > height
 			//maka height = availSlot
@@ -612,21 +629,25 @@ console.log("box:", set);
 					height = availSlot[i];
 				}
 			}
+
 			width = availSlot.length;
-			//return 2 variabel. 
 			return {width:width, height:height};
 				console.log("origins:", origin);
 		};
 
 		////////////////////////////
+		
 		function DFSDraw(start, availSlot, addedToGrid, height) {
 			//start: awal mula menelusuri node
 			var visited = {};
 			var origin = {};
-			
-			var horSpacing = parseInt(($('svg').width()-marginX*2)/availSlot.length); //.width punya svg
-			var verSpacing = parseInt(($('svg').height()-marginY*2)/height); // .height punya svg
-			
+
+			//var horizontal
+			var horSpacing = parseInt(($('svg').width()-marginX*2)/availSlot.length);
+
+			//var vertical
+			var verSpacing = parseInt(($('svg').height()-marginY*2)/height);
+
 			//start itu parentsnya
 			var stack = [start];
 
@@ -636,6 +657,7 @@ console.log("box:", set);
 
 				if (visited[node]!=true) {
 					visited[node] = true;
+					
 					/////////////////////
 					if (edges[node]!=null) {
 						for (var i = 0; i < edges[node].length; i++) {
@@ -655,8 +677,6 @@ console.log("box:", set);
 						curr++;
 						origins.push(origin[currNode]);
 						currNode = origin[currNode];
-						
-
 					}
 
 					//addedToGrid untuk catat node apa saja yang sudah di draw
@@ -669,23 +689,19 @@ console.log("box:", set);
 						//node[i] akan sama denga curr Levelnya
 						//availSlot[curr]: tinggi nya
 						//curr : menentukan level dari suatu node
-							redraw(node, marginX+horSpacing*curr, marginY+availSlot[curr]*verSpacing); //availSlot yang masih 0
+						redraw(node, marginX+horSpacing*curr, marginY+availSlot[curr]*verSpacing); //availSlot yang masih 0
+
 						//availSlot[] yang sudah terpakai, lalu availSlot++ agar posisi Y tidak tumpang tindih
 						availSlot[curr]++; //hasil dari availSlot[curr]++ akan dipakai utk perhitungan posisi Y
 						//node yang sekarang di masukan ke dalam grid, maka di push
 						addedToGrid.push(node);
-						
-						
 					}
-
-					
 				}
 			}
 		}//batas DFS Draw
 	
 		var dimension = DFSCalc();
 		var availSlot = [];
-		var addedToGrid = [];
 
 		//setelah tau dimensi width
 		//availSlot[] jadi 0 yang artinya grid2 tersedia untuk di draw
@@ -693,12 +709,14 @@ console.log("box:", set);
 			availSlot[i] = 0;
 		}
 
-		var ver = parseInt($('svg').height());
+		var addedToGrid = [];
+
 		//untuk semua parents jalankan DFSDraw
 		for (var i = 0; i < parents.length; i++) {
 			DFSDraw(parents[i], availSlot, addedToGrid, dimension.height);
 		}
-		
+
+
 		//untuk menyambungkan lagi node dengan edgenya
 		//atau dapat disebut juga untuk menyambungkan ikon-ikon dengan linknya
 		for (var i = 0; i < g.edges.length; i++) {
@@ -706,6 +724,13 @@ console.log("box:", set);
 			g.edges[i].connection.draw();
 		}
 
+	};
+
+	var layouter;
+	redraw = function() {
+
+		layouter.layout();
+		renderer.draw();
 	};
 
 	//kondisi jika tidak dapat dicari parentnya
@@ -728,20 +753,19 @@ console.log("box:", set);
 				echo ",\"".$parent['form_dari']."\"";
 			}
 		}
-		?>];	
-	} 
-	var layouter;
-	redraw = function() {
+		?>];
 
-		layouter.layout();
-		renderer.draw();
-	};
+		
+	} 
+	
 	
 	layouter = new Graph.Layout.Ordered(g);
 		//jika belum dimodifikasi, maka bentuk diagram akan mengikuti koordinat default(koordinat yang sudah ditentukan dgn algoritma)
 		if (existUnmodified) {
 			// Susun diagram ke bentuk default
 			setTimeout(resetKoordinat,0);
+			//matrix.x=1000;
+			//matrix.y=-20;
 		}
 
 

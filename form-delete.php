@@ -2,10 +2,11 @@
 	include 'admin/connect.php';
 
 	//penggunaan id_form dan id
-	//id untuk id_form
+	
+	//id untuk id_katalog
 	$id = $_GET['id'];
 
-	//id untuk id_katalog
+	//id untuk id_form
 	$idform = $_GET['idform'];
 	$status = $_GET['status'];
 	$idstack = $_GET['idstack'];

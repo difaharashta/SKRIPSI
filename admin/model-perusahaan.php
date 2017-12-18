@@ -6,6 +6,8 @@
     $query = mysql_query("select * from architect_perusahaan where architect_perusahaan_id='$id'");
     $data = mysql_fetch_array($query);
     $rows = mysql_num_rows($query);
+	
+	$_SESSION['perusahaan_nama'] = $data['architect_perusahaan_nama'];
 
 
 //query data first untuk ngambil model EAnya yang udah dimodelin
@@ -42,13 +44,17 @@ $lastKey = key($dataModels);
                                           //TAMBAH PRELIMINARY 
 										  $indexs=1;
 										  for ($i=0; $i <= $lastKey; $i++) { 
-                                            if($dataModels[$i]!=""){
+                                            if(isset($dataModels[$i])){ 		//diperbaiki dgn ditambah isset
+												if($dataModels[$i]!=""){
 												$dataModel[] = $dataModels[$i];
 												// TAMBAH PRELIMINARY 
 												$dataModel[$indexs] = $dataModels[$i];
 												// TAMBAH PRELIMINARY 
 												$indexs++;
                                             }
+										}
+											
+											
                                           }
 
 }	
@@ -155,7 +161,7 @@ $dataModel[0]=1;
                                                     while ($dataKatalog=mysql_fetch_array($queryKatalog)) {
                                                         ?>
                                                         <li>
-                                                        <a  target="_blank" href="../daftarform.php?id=<?php echo $dataKatalog['id_katalog']; ?>&idper=<?php
+                                                        <a  target="_blank" href="../daftarform_admin.php?id=<?php echo $dataKatalog['id_katalog']; ?>&idper=<?php
                                             echo $id;
                                             ?>">
                                              <?php echo $dataKatalog['nama_katalog']; ?>
@@ -226,7 +232,7 @@ $dataModel[0]=1;
                                         while($dataDiagram=mysql_fetch_array($queryDiagram)){
 										?>
 										<li>
-											<a target="_blank" href="../diagram_detail.php?id=<?php echo $dataDiagram['id_diagram'] ?>&idper=<?php
+											<a target="_blank" href="../diagram_detail_admin.php?id=<?php echo $dataDiagram['id_diagram'] ?>&idper=<?php
 											echo $id;
 											?>">
 											<?php echo $dataDiagram['nama_diagram']; echo " Diagram"?>

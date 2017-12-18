@@ -5,8 +5,6 @@ $idform = $_GET['idform'];
 $query = "select * from togaf_katalog where id_katalog='$id'";
 $dataTogaf = mysql_fetch_array(mysql_query($query));
 
-
-
 if($id!=14){
 
   $queryForm = "select * from form where id_form='$idform'";
@@ -98,17 +96,8 @@ if($id!=14){
                 <?php
               }
               ?>
-
-
-
-
               <button type="submit" class="form-control btn btn-success">Edit </button>
-
-
             </form>
-
-
-
           </div>
         </div>
         <!-- /.row -->

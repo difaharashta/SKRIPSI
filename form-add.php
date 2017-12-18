@@ -3,6 +3,7 @@
   $id = $_GET['id'];
   $query = "select * from togaf_katalog where id_katalog='$id'";
   $dataTogaf = mysql_fetch_array(mysql_query($query));
+  //Jika bukan form jabatan
   if($id!=14){
 
 ?>
@@ -102,9 +103,9 @@
 
 
 }
-//batas stackholder
-else
 
+else
+//form untuk jabatan
 {
 
     ?>

@@ -79,11 +79,7 @@ $provinsi =  array("Aceh", "Sumatera Utara", "Sumatera Barat", "Riau", "Jambi", 
                                             <?php
 											for($i=0;$i<count($provinsi);$i++){
 												?>
-												<option <?php
-												if($provinsi[$i]==$data['architect_perusahaan_provinsi']){
-													echo "selected";
-												}
-												?>
+												<option
 												value="<?php
 												echo $provinsi[$i]; ?>"><?php echo $provinsi[$i]; ?></option>
 												<?php
@@ -97,11 +93,11 @@ $provinsi =  array("Aceh", "Sumatera Utara", "Sumatera Barat", "Riau", "Jambi", 
                                         </div>
                                         <div class="form-group">
                                             <label>Nomor Telepon/Hp Perusahaan</label>
-                                            <input required class="form-control" type="number" name="hp" placeholder="Masukkan Nomor Telepon/Handphone"/>
+                                            <input required class="form-control" type="text" name="hp" placeholder="Masukkan Nomor Telepon/Handphone"/>
                                         </div>
                                         <div class="form-group">
                                             <label>Fax</label>
-                                            <input class="form-control" type="number" name="fax" placeholder="Masukkan Fax"/>
+                                            <input class="form-control" type="text" name="fax" placeholder="Masukkan Fax"/>
                                         </div>
                                         <button type="submit" class="form-control btn btn-success">Submit</button>
 
